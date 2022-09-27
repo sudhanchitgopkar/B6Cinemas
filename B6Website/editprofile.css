@@ -1,0 +1,11 @@
+.nav-text {
+    color: #EDEDED;
+     font-size:50px;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+
+}
