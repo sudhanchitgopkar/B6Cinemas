@@ -12,12 +12,12 @@ body {
     overflow-x: hidden;
     padding-top: 20px;
   }
-  
+
 .left {
     left: 0;
     background-color: #8EAEBD;
 }
-  
+
 .right {
     right: 0;
     background-color: #30415D;
@@ -61,7 +61,7 @@ body {
 .add-button {
     background-color:#8EAEBD;
     border: none;
-    border-radius: 7px;
+    border-radius: 5px;
     color: white;
     font-size: 20px;
 }
