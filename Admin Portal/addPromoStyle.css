@@ -21,6 +21,7 @@ body {
 .right {
     right: 0;
     background-color: #30415D;
+    top: 10%;
 }
 
 .nav-buttons {
@@ -71,34 +72,15 @@ body {
     background-color: #8EAEBD;
 }
 
-.fancy-table {
-    border-collapse: collapse;
-    min-width: 250px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    margin-left:auto; 
-    margin-right:auto;
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
-.fancy-table thead tr {
-    background-color: #30415D;
-    color: #ffffff;
+.text-forms {
+    width: 90%;
+    display: block;
     text-align: center;
-}
-
-.fancy-table th,
-.fancy-table td {
-    padding: 12px 15px;
-}
-
-.fancy-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
-
-.fancy-table tbody tr:nth-of-type(even) {
-    background-color: #f3f4f2;
-}
-
-.fancy-table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
 }
