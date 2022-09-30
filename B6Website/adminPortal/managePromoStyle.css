@@ -15,7 +15,7 @@ body {
 
 .left {
     left: 0;
-    background-color: #8EAEBD;
+    background-color: white;
 }
 
 .right {
@@ -24,29 +24,31 @@ body {
 }
 
 .nav-buttons {
-    position: absolute;
-    top: 10%;
+    position: relative;
+    top: 20%;
     left: 2%;
     right: 77%;
+    width: 20%;
     text-align: center;
 }
 
 .content {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    padding: 100px 100px;
+    background-color: white; 
+    padding: 0px 100px 50px 100px;
     border-radius: 7px;
+    width: 60%;
 }
 
 .admin-button {
     background-color: #30415D ; 
     display: block; 
     width: 100%;
-    padding: 20px 10px;
+    padding: 15px 10px;
     margin-bottom: 10px;
     border-radius: 12px;
     border: none;
@@ -55,25 +57,24 @@ body {
 }
 
 .admin-button:hover {
-    background-color: #CF6766;
+    background-color: #8EAEBD;
 }
 
 .add-button {
-    background-color:#8EAEBD;
+    background-color:#30415D;
     border: none;
     border-radius: 5px;
     color: white;
     font-size: 20px;
+    padding: 5px;
 }
 
 .add-button:hover {
-    background-color: #CF6766;
+    background-color: #8EAEBD;
 }
 
 .fancy-table {
     border-collapse: collapse;
-    font-size: 0.9em;
-    font-family: sans-serif;
     min-width: 250px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     margin-left:auto; 
@@ -81,7 +82,7 @@ body {
 }
 
 .fancy-table thead tr {
-    background-color: #8EAEBD;
+    background-color: #30415D;
     color: #ffffff;
     text-align: center;
 }

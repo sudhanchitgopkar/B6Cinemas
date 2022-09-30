@@ -15,7 +15,7 @@ body {
   
 .left {
     left: 0;
-    background-color: #8EAEBD;
+    background-color: white;
 }
   
 .right {
@@ -24,17 +24,18 @@ body {
 }
 
 .nav-buttons {
-    position: absolute;
-    top: 10%;
+    position: relative;
+    top: 20%;
     left: 2%;
     right: 77%;
+    width: 20%;
     text-align: center;
 }
 
 .content {
-    position: absolute;
-    top: 30%;
-    left: 20%;
+    position: relative;
+    top: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -43,7 +44,7 @@ body {
     background-color: #30415D ; 
     display: block; 
     width: 100%;
-    padding: 20px 10px;
+    padding: 15px 10px;
     margin-bottom: 10px;
     border-radius: 12px;
     border: none;
@@ -52,7 +53,7 @@ body {
 }
 
 .admin-button:hover {
-    background-color: #CF6766;
+    background-color: #8EAEBD;
 }
 
 .movie-container {
@@ -64,13 +65,23 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    padding: 5px;
 }
 
-img {
-    background-size: cover;
-    height: 300px;
+.ticket-container {
+	height: 425px;
 }
 
-img:hover {
-    background-color: #000;
+.add-movie {
+    background-color: #031424 ;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    transform: translate(-50%, -50%);
+}
+
+.add-movie:hover {
+    background-color: #8EAEBD;
 }
