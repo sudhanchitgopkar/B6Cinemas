@@ -31,8 +31,14 @@ body {
 button {
     border-radius: 9px;
     background-color: #EDEDED;
-    color: #EDEDED;
     border: 1px;
+}
+
+.btn {
+    border-radius: 15px;
+    background-color: #EDEDED;
+    border: 1px;
+    margin: 2px;
 }
 
 
