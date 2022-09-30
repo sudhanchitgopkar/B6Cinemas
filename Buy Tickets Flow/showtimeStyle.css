@@ -1,0 +1,81 @@
+.showtime-buttons {
+    text-align: center;
+}
+
+.time-buttons {
+    background-color: #8EAEBD;
+    margin: 10px 10px;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.time-buttons:hover {
+    background-color: #031424;
+}
+
+.showtime-dates {
+    text-align: center;
+}
+
+ol {
+    list-style-type: none;
+}
+  
+li {
+    display: inline-block;
+}
+  
+input[type="checkbox"] {
+   display: none;
+}
+
+.chair-img {
+    height: 50px;
+    width: 50px;
+}
+
+.theater {
+    padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 43%;
+}
+
+.select-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    padding: 50px 50px 50px 50px;
+    /* border-style: solid;
+    border-color: black; */
+}
+
+input[type="checkbox"] {
+    content: url('chair.png');
+    appearance: none;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+input[type="checkbox"]:checked {
+    content: url('selectedChair.png');
+}
+  
+.checkout-button {
+    background-color:#8EAEBD;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;    
+}
+
+.theater {
+    padding-bottom: 25px;
+    border-bottom: solid;
+}
+
+.screen {
+    text-align: center;
+}
