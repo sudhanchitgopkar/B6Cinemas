@@ -14,8 +14,7 @@ body {
     display: flex;
 	height: 100vh;
 	display:flex;
-   	flex-direction:column;
-	
+   	flex-direction:column;	
 }
 
 .navbar {
@@ -35,7 +34,7 @@ button {
 }
 
 .btn {
-    border-radius: 15px;
+    border-radius: 9px;
     background-color: #EDEDED;
     border: 1px;
     margin: 2px;
