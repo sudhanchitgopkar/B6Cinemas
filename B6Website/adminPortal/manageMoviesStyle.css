@@ -15,7 +15,7 @@ body {
   
 .left {
     left: 0;
-    background-color: #8EAEBD;
+    background-color: white;
 }
   
 .right {
@@ -24,17 +24,18 @@ body {
 }
 
 .nav-buttons {
-    position: absolute;
+    position: relative;
     top: 20%;
     left: 2%;
     right: 77%;
+    width: 20%;
     text-align: center;
 }
 
 .content {
-    position: absolute;
+    position: relative;
     top: 50%;
-    left: 30%;
+    left: 55%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -52,7 +53,7 @@ body {
 }
 
 .admin-button:hover {
-    background-color: #CF6766;
+    background-color: #8EAEBD;
 }
 
 .movie-container {
@@ -78,7 +79,7 @@ body {
     color: white;
     font-size: 20px;
     padding: 5px;
-    transform: translate(200%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .add-movie:hover {

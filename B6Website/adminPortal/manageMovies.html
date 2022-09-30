@@ -28,19 +28,15 @@
                   </li>
                   
               </ul>
-              <form class="form-inline">
-                  <input class="form-control" type="search" placeholder="Search Movies" aria-label="Search">
-                  <button class="btn" type="submit">Search</button>
-              </form>
           </div>
       </nav>  
     </div>
     
     <div class="split left">
       <div class="nav-buttons">
-        <button class="admin-button">Manage Accounts</button>
-        <button class="admin-button">Manage Movies</button>
-        <button class="admin-button">Manage Promotions</button>
+        <button class="admin-button" onclick="location.href='manageAccounts.html'">Manage Accounts</a></button>
+        <button class="admin-button" onclick="location.href='manageMovies.html'">Manage Movies</button>
+        <button class="admin-button" onclick="location.href='managePromotions.html'">Manage Promotions</button>
       </div>
     </div>
     
@@ -60,7 +56,7 @@
                               <p class="ticket__movie-slogan">
                                   More human than human is our motto.
                               </p>
-                              <button class="ticket__buy-btn">Edit</button>
+                              <button class="ticket__buy-btn" onclick="location.href='editMovie.html'">Edit</button>
                           </div>
                       </div>
                   </div>
@@ -73,14 +69,14 @@
                           <div class="ticket__content">
                               <h4 class="ticket__movie-title">Justice League</h4>
                               <p class="ticket__movie-slogan">You can't save the world alone.</p>
-                              <button class="ticket__buy-btn">Edit</button>
+                              <button class="ticket__buy-btn" onclick="location.href='editMovie.html'">Edit</button>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
       </div>
-      <button class="add-movie">Add Movie</button>
+      <button class="add-movie"  onclick="location.href='addMovie.html'">Add Movie</button>
       </div>
     </div>
   </body>

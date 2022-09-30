@@ -19,6 +19,12 @@
 
 ol {
     list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
   
 li {
@@ -30,33 +36,50 @@ input[type="checkbox"] {
 }
 
 .chair-img {
-    height: 50px;
-    width: 50px;
+    width: 3vw;
+}
+
+.theater-seats {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
 }
 
 .theater {
+    position: relative;
     padding-top: 25px;
     margin-left: auto;
     margin-right: auto;
-    width: 43%;
+    width: 50%;
+    justify-content: center;
+    padding-bottom: 25px;
+    border-bottom: solid;
+}
+
+.top-seats {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    justify-content: center;
+    text-align: center;
 }
 
 .select-container {
-    position: absolute;
+    position: relative;
+    width: 50%;
     left: 50%;
     transform: translate(-50%, 0%);
     text-align: center;
     padding: 50px 50px 50px 50px;
-    /* border-style: solid;
-    border-color: black; */
 }
 
 input[type="checkbox"] {
     content: url('chair.png');
     appearance: none;
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 4vw;
 }
 
 input[type="checkbox"]:checked {
@@ -68,12 +91,8 @@ input[type="checkbox"]:checked {
     border: none;
     border-radius: 5px;
     color: white;
-    font-size: 20px;    
-}
-
-.theater {
-    padding-bottom: 25px;
-    border-bottom: solid;
+    font-size: 20px;
+    padding: 5px;    
 }
 
 .screen {

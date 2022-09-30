@@ -21,26 +21,27 @@ body {
 .right {
     right: 0;
     background-color: #30415D;
-    top: 10%;
 }
 
 .nav-buttons {
-    position: absolute;
+    position: relative;
     top: 20%;
     left: 2%;
     right: 77%;
+    width: 20%;
     text-align: center;
 }
 
 .content {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
-    padding: 0px 100px 100px 100px;
+    background-color: white; 
+    padding: 0px 100px 50px 100px;
     border-radius: 7px;
+    width: 60%;
 }
 
 .admin-button {
@@ -72,15 +73,34 @@ body {
     background-color: #8EAEBD;
 }
 
-form {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+.fancy-table {
+    border-collapse: collapse;
+    min-width: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left:auto; 
+    margin-right:auto;
 }
 
-.text-forms {
-    width: 90%;
-    display: block;
+.fancy-table thead tr {
+    background-color: #30415D;
+    color: #ffffff;
     text-align: center;
+}
+
+.fancy-table th,
+.fancy-table td {
+    padding: 12px 15px;
+}
+
+.fancy-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.fancy-table tbody tr:nth-of-type(even) {
+    background-color: #f3f4f2;
+}
+
+.fancy-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
 }

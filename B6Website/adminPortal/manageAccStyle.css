@@ -10,36 +10,38 @@ body {
     z-index: 1;
     top: 0;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-bottom: 30px;
   }
-
+  
 .left {
     left: 0;
     background-color: white;
 }
-
+  
 .right {
     right: 0;
     background-color: #30415D;
 }
 
 .nav-buttons {
-    position: absolute;
+    position: relative;
     top: 20%;
     left: 2%;
     right: 77%;
+    width: 20%;
     text-align: center;
 }
 
 .content {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
+    background-color: white; 
     padding: 0px 100px 100px 100px;
     border-radius: 7px;
+    width: 60%;
 }
 
 .admin-button {
@@ -61,7 +63,7 @@ body {
 .add-button {
     background-color:#30415D;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     color: white;
     font-size: 20px;
     padding: 5px;
@@ -102,3 +104,11 @@ body {
     font-weight: bold;
     color: #009879;
 }
+
+.customer-button {
+    color: black;
+    padding: 5px;
+    border-radius: 7px;;
+}
+
+
