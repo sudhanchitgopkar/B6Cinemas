@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Tab Logo-->
+    <link rel="icon" href="WhiteB6.png" type="image/icon type">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="registerCollapsible.js"></script>
+    <title>B6 Cinemas</title>
+</head>
+
+<body>
+    <div id="navBar">
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
+            <a class="navbar-brand" href="#">
+                <img src="B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
+               </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <button>
+                            <a class="nav-link" href="#">Login</a>
+                        </button>
+                    </li>
+                    
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control" type="search" placeholder="Search Movies" aria-label="Search">
+                    <button class="btn" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>  
+    </div>
+
+    <div class="card">
+        <img src="popcornIcon.png" class = "icon"></img>
+        <h3 class = "loginText">Welcome to B6</h3>
+         <form class="loginForm">
+            <hr>
+            <label for="username">👤</label> 
+            <input class = "formField" name = "username" type="text" placeholder="Full Name*"/>
+            <br>
+            <label for="phone">📞</label>
+            <input class = "formField" name = "phone" type="text" placeholder="Phone Number*"/>
+            <br>
+            <label for="email">📧</label>
+            <input class = "formField" name = "pwd" type="password" placeholder="Email*"/>
+            <br>
+            <label for="pwd">🔐</label>
+            <input class = "formField" name = "pwd" type="password" placeholder="Password*"/>
+            <br>
+            <hr>
+            <button type="button" class="optional">Home Address (Optional)</button>
+            <div class = "optionalContent">
+                <label for="address">📍</label>
+                <input class = "formField" name = "address" type="text" placeholder="Street Name"/>
+                <input class = "formField" name = "address" type="text" placeholder="State (e.g. GA)"/>
+                <br>
+                <input class = "formField" name = "address" type="text" placeholder="Country"/>
+             </div>
+             <br>
+             <hr>
+             <button type="button" class="optional">Card #1 (Optional)</button>
+             <div class = "optionalContent">
+                <label for="creditCard">💳</label>
+                <input class = "formField" name = "creditCard" type="text" placeholder="Full name"/>
+                <input class = "formField" name = "creditCard" type="text" placeholder="Expiration Date"/>
+                <br>
+                <input class = "formField" name = "creditCard" type="text" placeholder="Card Number"/>
+                <input class = "formField" name = "creditCard" type="text" placeholder="CVV"/>
+             </div>
+             <br>
+             <button type="button" class="optional">Card #2 (Optional)</button>
+             <div class = "optionalContent">
+                <label for="creditCard">💳</label>
+                <input class = "formField" name = "creditCard" type="text" placeholder="Full name"/>
+                <input class = "formField" name = "creditCard" type="text" placeholder="Expiration Date"/>
+                <br>
+                <input class = "formField" name = "creditCard" type="text" placeholder="Card Number"/>
+                <input class = "formField" name = "creditCard" type="text" placeholder="CVV"/>
+             </div>
+             <br>
+             <button type="button" class="optional">Card #3 (Optional)</button>
+             <div class = "optionalContent">
+                <label for="creditCard">💳</label>
+                <input class = "formField" name = "creditCard" type="text" placeholder="Full name"/>
+                <input class = "formField" name = "creditCard" type="text" placeholder="Expiration Date"/>
+                <br>
+                <input class = "formField" name = "creditCard" type="text" placeholder="Card Number"/>
+                <input class = "formField" name = "creditCard" type="text" placeholder="CVV"/>
+             </div>
+             <hr>
+            <button class = "formField" id = "btn">login</button>
+            <p class = "auxtext">Have an account? <a href="login.html"><b>Sign in.</b></a>
+        </form>
+    </div>
+   
+
+    <script>
+        var coll = document.getElementsByClassName("optional");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+  </body>
+</html>
