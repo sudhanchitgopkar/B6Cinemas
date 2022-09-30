@@ -67,3 +67,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.nav-confirm-link {
+    color: darkslategray;
+}
