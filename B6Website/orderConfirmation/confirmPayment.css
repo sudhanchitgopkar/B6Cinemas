@@ -20,6 +20,6 @@
     margin-right: auto;
 }
 
-.nav-confirm-link {
-    color: darkslategray;
+.nav-confirm-btn:hover {
+    color: gray;
 }
