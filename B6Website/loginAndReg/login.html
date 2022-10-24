@@ -1,3 +1,43 @@
+<?php
+    require("database.php");
+
+    // The beginning of the session
+    session_start();
+
+    // Checks if the user has clicked 'submit'
+    if ( isset($_POST['submit']) )
+    {
+        
+        // Querys for matching sign-in info
+        $query = 'SELECT * FROM user WHERE user_id=:user_id AND password=:password';
+        
+        $queryStatement = $db->prepare($query);
+     
+        $queryStatement->bindValue(':user_id', $_POST['user_id']);
+        $queryStatement->bindValue(':password', $_POST['password']);
+            
+        $queryStatement->execute();
+        $user = $queryStatement->fetch();
+
+        // Checks if the user entered correct sign-in information
+        if ( $queryStatement->rowCount() > 0)
+        {
+          $_SESSION['loggedin'] = true;
+          $_SESSION['user_id'] = $user['user_id'];
+          
+            if( $user['type'] == 1) {
+                header('Location: ../index.php')
+            }
+            else {
+                header('Location: ../adminPortal/manageAccounts.php')
+            }
+        } 
+
+       
+
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +65,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        
+                    <li class="nav-item"> 
                     </li>
                     
                 </ul>
@@ -37,12 +76,12 @@
     <div class="card">
         <img src="popcornIcon.png" class = "icon"></img>
         <h3 class = "loginText">Sign in to B6</h3>
-         <form class="loginForm">
-            <label for="username">👤</label> 
-            <input class = "formField" name = "username" type="text" placeholder="Username"/>
+         <form class="loginForm" id="sign-in" method="post" action="#">
+            <label for="user_id">👤</label> 
+            <input class = "formField" name="user_id" id="user_id" type="text" placeholder="Username"/>
             <br>
-            <label for="pwd">🔐</label>
-            <input class = "formField" name = "pwd" type="password" placeholder="Password"/>
+            <label for="password">🔐</label>
+            <input class = "formField" name = "password" id="password" type="password" placeholder="Password"/>
             <br>
             <button class = "formField" id = "btn" href = "loginConfirmation.html">login</button>
             <p class = "auxtext">New to B6? <a href="register.html"><b>Create an account.</b></a>

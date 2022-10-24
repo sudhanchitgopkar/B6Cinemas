@@ -1,3 +1,40 @@
+<?php
+    require("database.php");
+
+    // The beginning of the session
+    session_start();
+
+    // Checks if the user has clicked 'submit'
+    
+        // Querys for matching sign-in info
+        $query = 'SELECT * FROM user WHERE user_id=:user_id;
+        
+        $queryStatement = $db->prepare($query);
+     
+        $queryStatement->bindValue(':first_name', $_POST['firstName']);
+        $queryStatement->bindValue(':last_name', $_POST['lastName']);
+        $queryStatement->bindValue(':phone', $_POST['phone']);
+        $queryStatement->bindValue(':email', $_POST['email');
+        $queryStatement->bindValue(':promotion_opt_status', $_POST['promotionStatus']);
+        $queryStatement->bindValue(':address', $_POST['address']);
+            
+        $queryStatement->execute();
+        $user = $queryStatement->fetch();
+
+        // Checks if the user entered correct sign-in information
+        if ( $queryStatement->rowCount() > 0)
+        {
+          $_SESSION['loggedin'] = true;
+          $_SESSION['user_id'] = $user['user_id'];
+          
+        } 
+
+       
+
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,26 +62,36 @@
     </div>
 
     <div class="main">
-        <div class="personalInfo flexMe">
+        <form class="personalInfo flexMe" action="editUser.php" method="post">
            <h1>Personal Information</h1>
             <p>Click contents to edit</p>
             <div class="innerPersonalInfo">
                 <div>
-                <p><b>Name: </b>  </p>
-                <div id="edit" contenteditable="true">
-                    John Smith
+                <p><b>First Name: </b>  </p>
+                <div id="firstName" contenteditable="true">
+                   <?php echo $user['first_name'] ?>
+                </div>
+                <br>
+                <p><b>last Name: </b>  </p>
+                <div id="lastName" contenteditable="true">
+                    <?php echo $user['last_name'] ?>
                 </div>
                 <br>
                 <p><b>Email:</b></p>
-                <p>johnsmith@gmail.com</p> 
+                <p><?php echo $user['email'] ?></p> 
                 <br>
                 <p><b>Phone Number:</b></p>
-                <div id="edit" contenteditable="true">
-                    123-456-7890
+                <div id="phone" contenteditable="true">
+                    <?php echo $user['phone'] ?>
                 </div>
                 <br>
-                <p><b>Password:</b>   </p>
-                <div id="edit" contenteditable="true">
+                <p><b>Current Password:</b>   </p>
+                <div id="password" contenteditable="true">
+                      XXXXX
+                </div>
+                <br>
+                <p><b>New Password:</b>   </p>
+                <div id="newPassword" contenteditable="true">
                     password
                 </div>
                 <br>
@@ -53,29 +100,34 @@
                 <p><b>Home Address</b></p>
                 <div class="addressInfo">
                     <p>Street:</p>
-                    <div id="edit"  contenteditable="true">
-                        123 Apple St
+                    <div id="address"  contenteditable="true">
+                        <?php echo $user['Address'] ?>
                     </div>
                     <br>
                     <p>City:</p>
-                    <div id="edit"  contenteditable="true">
-                        Athens
+                    <div id="address"  contenteditable="true">
+                        
                     </div>
                     <br>
                     <p>State: </p>
-                    <div id="edit"  contenteditable="true">
-                        Georgia
+                    <div id="address"  contenteditable="true">
+                       
                     </div>
                     <br>
                     <p>Zipcode:</p>
-                    <div id="edit"  contenteditable="true">
-                        12345
+                    <div id="address"  contenteditable="true">
+                        
                     </div>
                 </div>
-                
+                <br>
+                <div id="personalInfo">
+                    <input type="checkbox" id="promotionStatus" checked=<?php $user['promotion_opt_status'] ?>>
+                    <label for="promotionStatus">Recieve promotional emails</label>
+                </div>
             </div>
+            <button class="Btn">Update Personal Information</button>
             </div>
-        </div>
+        </form>
 
         <div class="orders flexMe">
             <h1>Past Orders</h1>
@@ -215,7 +267,7 @@
                     <br>
                 </div>
                 </div>
-                <button class="paymentBtn">Update Information</button>
+                <button class="Btn">Update Information</button>
             </div>
         </div>
     </div>
