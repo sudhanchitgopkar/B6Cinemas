@@ -1,3 +1,6 @@
+<?php  
+    require("database.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,31 +43,31 @@
     <div class="card" id = "register">
         <img src="popcornIcon.png" class = "icon"></img>
         <h3 class = "loginText">Welcome to B6</h3>
-         <form class="loginForm" action="registerUser.php">
+         <form class="loginForm" action="registerUser.php" method="post">
             <hr>
-            <label for="username">👤</label> 
-            <input class = "formField" name = "firstName" type="text" placeholder="First Name*"/>
+            <label for="firstName">👤</label> 
+            <input class = "formField" name = "firstName" id="firstName" type="text" placeholder="First Name*"/>
             <br>
-            <label for="username">👤</label> 
-            <input class = "formField" name = "lastName" type="text" placeholder="Last Name*"/>
+            <label for="lastName">👤</label> 
+            <input class = "formField" name = "lastName" id="lastName" type="text" placeholder="Last Name*"/>
             <br>
             <label for="phone">📞</label>
-            <input class = "formField" name = "phone" type="text" placeholder="Phone Number*"/>
+            <input class = "formField" name = "phone" id="phone" type="text" placeholder="Phone Number*"/>
             <br>
             <label for="email">📧</label>
-            <input class = "formField" name = "email" type="text" placeholder="Email*"/>
+            <input class = "formField" name = "email" id="email" type="text" placeholder="Email*"/>
             <br>
-            <label for="pwd">🔐</label>
-            <input class = "formField" name = "password" type="password" placeholder="Password*"/>
+            <label for="password">🔐</label>
+            <input class = "formField" name = "password" id="password" type="password" placeholder="Password*"/>
             <br>
             <hr>
             <button type="button" class="optional">Home Address (Optional)</button>
             <div class = "optionalContent">
                 <label for="address">📍</label>
-                <input class = "formField" name = "address" type="text" placeholder="Street Name"/>
-                <input class = "formField" name = "address" type="text" placeholder="State (e.g. GA)"/>
+                <input class = "formField" name = "address" id="address" type="text" placeholder="Street Name"/>
+                <input class = "formField" name = "address" id="address" type="text" placeholder="State (e.g. GA)"/>
                 <br>
-                <input class = "formField" name = "address" type="text" placeholder="Country"/>
+                <input class = "formField" name = "address" id="address" type="text" placeholder="Country"/>
              </div>
              <br>
              <hr>

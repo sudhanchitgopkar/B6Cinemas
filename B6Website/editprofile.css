@@ -86,8 +86,12 @@ h3 {
     border-right: none;
 }
 
-.paymentBtn {
+.Btn {
     color: #30415D;
     padding: 15px;
 
+}
+
+#personalInfo {
+    padding-left: 30px;
 }
