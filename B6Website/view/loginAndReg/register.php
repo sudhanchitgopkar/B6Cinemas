@@ -64,10 +64,10 @@
             <button type="button" class="optional">Home Address (Optional)</button>
             <div class = "optionalContent">
                 <label for="address">📍</label>
-                <input class = "formField" name = "address" id="address" type="text" placeholder="Street Name"/>
-                <input class = "formField" name = "address" id="address" type="text" placeholder="State (e.g. GA)"/>
+                <input class = "formField" name = "addressStreet" id="addressStreet" type="text" placeholder="Street Name"/>
+                <input class = "formField" name = "addressState" id="addressState" type="text" placeholder="State (e.g. GA)"/>
                 <br>
-                <input class = "formField" name = "address" id="address" type="text" placeholder="Country"/>
+                <input class = "formField" name = "addressCountry" id="addressCountry" type="text" placeholder="Country"/>
              </div>
              <br>
              <hr>
@@ -102,7 +102,7 @@
              </div>
              <hr>
              <div class="submit" id="promotions">
-                <input type="checkbox" id="promotions" name="promotions">
+                <input type="checkbox" id="promotions" name="promotions" value="true">
                 <label for="promotions">Sign up for promotional emails</label><br>
              </div>
              <br>

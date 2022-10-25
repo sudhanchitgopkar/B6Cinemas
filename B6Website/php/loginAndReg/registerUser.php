@@ -9,11 +9,13 @@ $last_name = filter_input(INPUT_POST, 'lastName');
 $phone = filter_input(INPUT_POST, 'phone');
 $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password');
+$promotionStatus = filter_input(INPUT_POST, 'promotions');
+$status = filter_input(INPUT_POST, 'status');
 
-//$promotionStatus = filter_input(INPUT_POST, 'promotionStatus');
-//$status = filter_input(INPUT_POST, 'status');
-//$type = filter_input(INPUT_POST, 'type');
-//$address = filter_input(INPUT_POST, 'address');
+$address_street = filter_input(INPUT_POST, 'addressStreet');
+$address_state = filter_input(INPUT_POST, 'addressState');
+$address_country = filter_input(INPUT_POST, 'addressCountry');
+$address = $address_street . ' ' . $address_state . ' ' . $address_country;
 
 try {
 
@@ -28,11 +30,11 @@ try {
     $statement->bindValue(':_phone', $phone);
     $statement->bindValue(':_email', $email);
     $statement->bindValue(':_password_', $password);
-    $statement->bindValue(':_promotion_opt_status', 1);
     $statement->bindValue(':_status_', 1);
     $statement->bindValue(':_type_', 1);
-    $statement->bindValue(':_address_', '342');
-    
+    $statement->bindValue(':_address_', $address);
+    $statement->bindValue(':_promotion_opt_status', isset($promotionStatus));
+
     $statement->execute();
     $statement->closeCursor();
 
