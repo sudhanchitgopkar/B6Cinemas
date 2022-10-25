@@ -29,7 +29,7 @@ try {
     $statement->bindValue(':_last_name', $last_name);
     $statement->bindValue(':_phone', $phone);
     $statement->bindValue(':_email', $email);
-    $statement->bindValue(':_password_', $password);
+    $statement->bindValue(':_password_', password_hash($password, PASSWORD_DEFAULT));
     $statement->bindValue(':_status_', 1);
     $statement->bindValue(':_type_', 1);
     $statement->bindValue(':_address_', $address);
@@ -39,7 +39,7 @@ try {
     $statement->closeCursor();
 
     // Redirecting to the sign_in page
-    header("Location: ../../view/loginAndReg/login.html");
+    header("Location: ../../view/loginAndReg/login.php");
 
 } catch(PDOException $e) {
     echo 'Error!';

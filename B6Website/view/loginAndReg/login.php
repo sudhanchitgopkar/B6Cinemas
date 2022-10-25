@@ -1,4 +1,6 @@
-
+<?php
+    require("../database.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,12 +39,12 @@
     <div class="card">
         <img src="../../images/popcornIcon.png" class = "icon"></img>
         <h3 class = "loginText">Sign in to B6</h3>
-         <form class="loginForm" id="sign-in" method="post" action="#">
+         <form class="loginForm" id="sign-in" action="../../php/loginAndReg/loginUser.php" method="post">
             <label for="user_id">👤</label> 
-            <input class = "formField" name="user_id" id="user_id" type="text" placeholder="Username"/>
+            <input class = "formField" name="login_user_id" id="login_user_id" type="text" placeholder="Username"/>
             <br>
             <label for="password">🔐</label>
-            <input class = "formField" name = "password" id="password" type="password" placeholder="Password"/>
+            <input class = "formField" name = "login_password" id="login_password" type="password" placeholder="Password"/>
             <br>
             <button class = "formField" id = "btn" href = "loginConfirmation.html">login</button>
             <p class = "auxtext">New to B6? <a href="register.php"><b>Create an account.</b></a>
