@@ -37,7 +37,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <button class="btn">
-                        <a class="nav-link" href="view/loginAndReg/login.html">Login</a>
+                        <a class="nav-link" href="login.php">Login</a>
                     </button>
                 </li>
 
