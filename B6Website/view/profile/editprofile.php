@@ -53,61 +53,43 @@
             <div class="innerPersonalInfo">
                 <div>
                 <p><b>First Name: </b>  </p>
-                <div name= "id="firstName" contenteditable="true">
-                    <?php echo $user['first_name'] ?>
-                </div>
+                <input name="firstName" id="firstName" contenteditable="true" placeholder=<?php echo $user['first_name'] ?>></input>
                 <br>
                 <p><b>Last Name: </b>  </p>
-                <div id="lastName" contenteditable="true">
-                  <?php echo $user['last_name'] ?>
-                </div>
+                <input name="lastName" id="lastName" contenteditable="true" placeholder=<?php echo $user['last_name'] ?>></input>
                 <br>
                 <p><b>Email:</b></p>
                     <p><?php echo $user['email'] ?></p>
                 <br>
                 <p><b>Phone Number:</b></p>
-                <div id="phone" contenteditable="true">
-                    <?php echo $user['phone'] ?>
-                </div>
+                <input name="phone" id="phone" contenteditable="true" placeholder=<?php echo $user['phone'] ?>></input>
                 <br>
                 <p><b>Current Password:</b>   </p>
-                <div id="password" contenteditable="true">
-                    <p>            </p>
-                </div>
+                <input name="password" id="password" contenteditable="true"></input>
                 <br>
                 <p><b>New Password:</b>   </p>
-                <div id="newPassword" contenteditable="true" >
-                    <p>            </p>
-                </div>
+                <input name="newPassword" id="newPassword" contenteditable="true"></input>
                 <br>
 
                 <!--Optional Info-->
                 <p><b>Home Address</b></p>
+                <p><b><?php echo $user['address']?></b></p>
                 <div class="addressInfo">
                     <p>Street:</p>
-                    <div id="address_street"  contenteditable="true">
-                        <?php echo $user['Address'] ?>
-                        <p>            </p>
-                    </div>
+                    <input name="address_street" id="address_street"  contenteditable="true"></input>
                     <br>
                     <p>City:</p>
-                    <div id="address_city"  contenteditable="true">
-                        <p>            </p>
-                    </div>
+                    <input name="address_city" id="address_city"  contenteditable="true"></input>
                     <br>
                     <p>State: </p>
-                    <div id="address_state"  contenteditable="true">
-                        <p>            </p>
-                    </div>
+                    <input name="address_state" id="address_state"  contenteditable="true"></input>
                     <br>
                     <p>Zipcode:</p>
-                    <div id="address_zip"  contenteditable="true">
-                        <p>            </p>
-                    </div>
+                    <input name="address_zip" id="address_zip"  contenteditable="true"></input>
                 </div>
                 <br>
                 <div id="personalInfo">
-                    <input type="checkbox" id="promotionStatus" checked=<?php $user['promotion_opt_status'] ?>>
+                    <input type="checkbox" id="promotionStatus" name="promotionStatus"></input>
                     <label for="promotionStatus">Recieve promotional emails</label>
                 </div>
             </div>
