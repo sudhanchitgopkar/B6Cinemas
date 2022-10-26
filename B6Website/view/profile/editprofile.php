@@ -1,38 +1,18 @@
 <?php
-    require("database.php");
+    require_once("../database.php");
 
     // The beginning of the session
     session_start();
-
-    // Checks if the user has clicked 'submit'
     
-        // Querys for matching sign-in info
-        $query = 'SELECT * FROM user WHERE user_id=:user_id;
+    // Querys for matching sign-in info
+    $query = 'SELECT * FROM user WHERE user_id=:user_id';
         
-        $queryStatement = $db->prepare($query);
+    $queryStatement = $db->prepare($query);
      
-        $queryStatement->bindValue(':first_name', $_POST['firstName']);
-        $queryStatement->bindValue(':last_name', $_POST['lastName']);
-        $queryStatement->bindValue(':phone', $_POST['phone']);
-        $queryStatement->bindValue(':email', $_POST['email');
-        $queryStatement->bindValue(':promotion_opt_status', $_POST['promotionStatus']);
-        $queryStatement->bindValue(':address', $_POST['address']);
+    $queryStatement->bindValue(':user_id', $_SESSION['userID']);
             
-        $queryStatement->execute();
-        $user = $queryStatement->fetch();
-
-        // Checks if the user entered correct sign-in information
-        if ( $queryStatement->rowCount() > 0)
-        {
-          $_SESSION['loggedin'] = true;
-          $_SESSION['user_id'] = $user['user_id'];
-          
-        } 
-
-       
-
-    
-
+    $queryStatement->execute();
+    $user = $queryStatement->fetch();
 ?>
 
 <!DOCTYPE html>
@@ -62,17 +42,17 @@
     </div>
 
     <div class="main">
-        <form class="personalInfo flexMe" action="editUser.php" method="post">
+        <form class="personalInfo flexMe" action="../../php/profile/editUser.php" method="post">
            <h1>Personal Information</h1>
             <p>Click contents to edit</p>
             <div class="innerPersonalInfo">
                 <div>
                 <p><b>First Name: </b>  </p>
                 <div id="firstName" contenteditable="true">
-                   <?php echo $user['first_name'] ?>
+                   <p><?php echo $user['first_name'] ?></p>
                 </div>
                 <br>
-                <p><b>last Name: </b>  </p>
+                <p><b>Last Name: </b>  </p>
                 <div id="lastName" contenteditable="true">
                     <?php echo $user['last_name'] ?>
                 </div>
@@ -87,12 +67,12 @@
                 <br>
                 <p><b>Current Password:</b>   </p>
                 <div id="password" contenteditable="true">
-                      XXXXX
+                    <p>            </p>
                 </div>
                 <br>
                 <p><b>New Password:</b>   </p>
-                <div id="newPassword" contenteditable="true">
-                    password
+                <div id="newPassword" contenteditable="true" >
+                    <p>            </p>
                 </div>
                 <br>
 
@@ -102,21 +82,22 @@
                     <p>Street:</p>
                     <div id="address"  contenteditable="true">
                         <?php echo $user['Address'] ?>
+                        <p>            </p>
                     </div>
                     <br>
                     <p>City:</p>
                     <div id="address"  contenteditable="true">
-                        
+                        <p>            </p>
                     </div>
                     <br>
                     <p>State: </p>
                     <div id="address"  contenteditable="true">
-                       
+                        <p>            </p>
                     </div>
                     <br>
                     <p>Zipcode:</p>
                     <div id="address"  contenteditable="true">
-                        
+                        <p>            </p>
                     </div>
                 </div>
                 <br>
