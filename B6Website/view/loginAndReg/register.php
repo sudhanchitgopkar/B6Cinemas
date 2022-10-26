@@ -74,31 +74,31 @@
              <button type="button" class="optional">Card #1 (Optional)</button>
              <div class = "optionalContent">
                 <label for="creditCard">💳</label>
-                <input class = "formField" name = "creditCard" type="text" placeholder="Full name"/>
-                <input class = "formField" name = "creditCard" type="text" placeholder="Expiration Date"/>
+                <input class = "formField" name = "creditCard1_name" type="text" placeholder="Full name"/>
+                <input class = "formField" name = "creditCard1_date" type="text" placeholder="Expiration Date"/>
                 <br>
-                <input class = "formField" name = "creditCard" type="password" placeholder="Card Number"/>
-                <input class = "formField" name = "creditCard" type="password" placeholder="CVV"/>
+                <input class = "formField" name = "creditCard1_number" type="password" placeholder="Card Number"/>
+                <input class = "formField" name = "creditCard1_cvv" type="password" placeholder="CVV"/>
              </div>
              <br>
              <button type="button" class="optional">Card #2 (Optional)</button>
              <div class = "optionalContent">
                 <label for="creditCard">💳</label>
-                <input class = "formField" name = "creditCard" type="text" placeholder="Full name"/>
-                <input class = "formField" name = "creditCard" type="text" placeholder="Expiration Date"/>
+                <input class = "formField" name = "creditCard2_name" type="text" placeholder="Full name"/>
+                <input class = "formField" name = "creditCard2_date" type="text" placeholder="Expiration Date"/>
                 <br>
-                <input class = "formField" name = "creditCard" type="password" placeholder="Card Number"/>
-                <input class = "formField" name = "creditCard" type="password" placeholder="CVV"/>
+                <input class = "formField" name = "creditCard2_number" type="password" placeholder="Card Number"/>
+                <input class = "formField" name = "creditCard2_cvv" type="password" placeholder="CVV"/>
              </div>
              <br>
              <button type="button" class="optional">Card #3 (Optional)</button>
              <div class = "optionalContent">
                 <label for="creditCard">💳</label>
-                <input class = "formField" name = "creditCard" type="text" placeholder="Full name"/>
-                <input class = "formField" name = "creditCard" type="text" placeholder="Expiration Date"/>
+                <input class = "formField" name = "creditCard3_name" type="text" placeholder="Full name"/>
+                <input class = "formField" name = "creditCard3_date" type="text" placeholder="Expiration Date"/>
                 <br>
-                <input class = "formField" name = "creditCard" type="password" placeholder="Card Number"/>
-                <input class = "formField" name = "creditCard" type="password" placeholder="CVV"/>
+                <input class = "formField" name = "creditCard3_number" type="password" placeholder="Card Number"/>
+                <input class = "formField" name = "creditCard3_cvv" type="password" placeholder="CVV"/>
              </div>
              <hr>
              <div class="submit" id="promotions">

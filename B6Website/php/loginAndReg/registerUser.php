@@ -17,6 +17,21 @@ $address_state = filter_input(INPUT_POST, 'addressState');
 $address_country = filter_input(INPUT_POST, 'addressCountry');
 $address = $address_street . ' ' . $address_state . ' ' . $address_country;
 
+$card_1_name = filter_input(INPUT_POST, 'creditCard1_name');
+$card_1_date = filter_input(INPUT_POST, 'creditCard1_date');
+$card_1_number = filter_input(INPUT_POST, 'creditCard1_number');
+$card_1_cvv = filter_input(INPUT_POST, 'creditCard1_cvv');
+
+$card_2_name = filter_input(INPUT_POST, 'creditCard2_name');
+$card_2_date = filter_input(INPUT_POST, 'creditCard2_date');
+$card_2_number = filter_input(INPUT_POST, 'creditCard2_number');
+$card_2_cvv = filter_input(INPUT_POST, 'creditCard2_cvv');
+
+$card_3_name = filter_input(INPUT_POST, 'creditCard3_name');
+$card_3_date = filter_input(INPUT_POST, 'creditCard3_date');
+$card_3_number = filter_input(INPUT_POST, 'creditCard3_number');
+$card_3_cvv = filter_input(INPUT_POST, 'creditCard3_cvv');
+
 try {
 
     // Querying the database
@@ -24,6 +39,7 @@ try {
         (first_name, last_name, phone, email, password_, promotion_opt_status, status_, type_, address_)
         VALUES 
         (:_first_name, :_last_name, :_phone, :_email, :_password_, :_promotion_opt_status, :_status_, :_type_, :_address_)';
+
     $statement = $db->prepare($query);
     $statement->bindValue(':_first_name', $first_name);
     $statement->bindValue(':_last_name', $last_name);
@@ -37,6 +53,21 @@ try {
 
     $statement->execute();
     $statement->closeCursor();
+
+    $query_ = 'INSERT INTO payment_card
+           (first_name, last_name, phone, email, password_, promotion_opt_status, status_, type_, address_)
+           VALUES
+           (:_first_name, :_last_name, :_phone, :_email, :_password_, :_promotion_opt_status, :_status_, :_type_, :_address_)';
+
+    if(isset($card_1_name) && isset($card_1_date) && isset($card_1_cvv) && isset($card_1_number)) {
+
+    }
+    if(isset($card_2_name) && isset($card_2_date) && isset($card_2_cvv) && isset($card_2_number)) {
+
+    }
+    if(isset($card_3_name) && isset($card_3_date) && isset($card_3_cvv) && isset($card_3_number)) {
+
+    }
 
     // Redirecting to the sign_in page
     header("Location: ../../view/loginAndReg/login.php");
