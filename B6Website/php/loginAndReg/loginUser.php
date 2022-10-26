@@ -11,21 +11,19 @@
 
 
     try {
-        $query = 'SELECT email, password_, type_, user_id FROM user WHERE email=:_email';
+        $query = 'SELECT email, password_, status_, type_, user_id FROM user WHERE email=:_email';
 
         $statement = $db->prepare($query);
         $statement->bindValue(':_email', $login_user);
         $statement->execute();
         $info = $statement->fetch();
 
-        if(password_verify($login_pass, $info['password_'])) {
-            // TODO start session with session variables for current logged in user HERE!!
-            if (isset($remember)) {
-                setcookie("username", $login_user, time()+3600*24);
-                setcookie("password", $login_pass, time()+3600*24);
-                setcookie("remember", true, time()+3600*24);
-            }
+        // if user is inactive, don't allow login
+        if($info['status_'] == 1) {
+            header("Location: ../../view/loginAndReg/login.php");
+        } else if(password_verify($login_pass, $info['password_'])) {
 
+            // start session with session variables for current logged in user
             $_SESSION['loggedin'] = true;
             $_SESSION['userID'] = $info['user_id'];
             $_SESSION['userType'] = $info['type_'];
