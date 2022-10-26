@@ -65,9 +65,10 @@
             <div class = "optionalContent">
                 <label for="address">📍</label>
                 <input class = "formField" name = "addressStreet" id="addressStreet" type="text" placeholder="Street Name"/>
-                <input class = "formField" name = "addressState" id="addressState" type="text" placeholder="State (e.g. GA)"/>
+                <input class = "formField" name = "addressCity" id="addressCity" type="text" placeholder="City (e.g. Athens)"/>
                 <br>
-                <input class = "formField" name = "addressCountry" id="addressCountry" type="text" placeholder="Country"/>
+                <input class = "formField" name = "addressState" id="addressState" type="text" placeholder="State"/>
+                <input class = "formField" name = "addressZip" id="addressZip type="text" placeholder="Zip"/>
              </div>
              <br>
              <hr>
