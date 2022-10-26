@@ -1,5 +1,6 @@
 <?php
     require("../database.php");
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,14 +42,17 @@
         <h3 class = "loginText">Sign in to B6</h3>
          <form class="loginForm" id="sign-in" action="../../php/loginAndReg/loginUser.php" method="post">
             <label for="user_id">👤</label> 
-            <input class = "formField" name="login_user_id" id="login_user_id" type="text" placeholder="Username"/>
+            <input class = "formField" name="login_user_id" id="login_user_id" type="text" placeholder="Username"></input>
             <br>
             <label for="password">🔐</label>
-            <input class = "formField" name = "login_password" id="login_password" type="password" placeholder="Password"/>
+            <input class = "formField" name = "login_password" id="login_password" type="password" placeholder="Password"></input>
             <br>
             <button class = "formField" id = "btn" href = "loginConfirmation.html">login</button>
             <p class = "auxtext">New to B6? <a href="register.php"><b>Create an account.</b></a>
-            <br>Forgot password? <a href="pwdReset.html"> <b>Reset it here.</a></b></p>
+            <br>Forgot password? <a href="pwdReset.html"> <b>Reset it here.</a></b><br>
+                <input type="checkbox" id="remember" name="remember" value="true" checked=<?php $_COOKIE['remember']?>>
+                <label for="promotions">Remember Me</label><br>
+            </p>    
         </form>
     </div>
    

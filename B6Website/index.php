@@ -3,6 +3,8 @@
 
     // connect to database
     require_once('php/database.php');
+
+    $i = $_SESSION['loggedin'];
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +16,6 @@
     
     <!--Tab Logo-->
     <link rel="icon" href="images/WhiteB6.png" type="image/icon type">
-
-    <?php $i = $_SESSION['loggedin'] ?>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="view/main.css">
@@ -75,7 +75,7 @@
                         </p>
                         <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=gCcx85zbxz4'">Watch the trailer</button>
                         <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.html">Book movie</a>
+                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
                         </button>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         <p class="ticket__movie-slogan">You can't save the world alone.</p>
                         <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=r9-DM9uBtVI'">Watch the trailer</button>
                         <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.html">Book movie</a>
+                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
                         </button>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                         </p>
                         <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=Go8nTmfrQd8'">Watch the trailer</button>
                         <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.html">Book movie</a>
+                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
                         </button>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                         <p class="ticket__movie-slogan">You can't save the world alone.</p>
                         <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=0IOsk2Vlc4o'">Watch the trailer</button>
                         <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.html">Book movie</a>
+                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
                         </button>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
                         </p>
                         <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=gCcx85zbxz4'">Watch the trailer</button>
                         <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.html">Book movie</a>
+                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
                         </button>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                         <p class="ticket__movie-slogan">You can't save the world alone.</p>
                         <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=r9-DM9uBtVI'">Watch the trailer</button>
                         <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.html">Book movie</a>
+                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
                         </button>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                         </p>
                         <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=Go8nTmfrQd8'">Watch the trailer</button>
                         <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.html">Book movie</a>
+                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
                         </button>
                     </div>
                 </div>
@@ -197,7 +197,7 @@
                         <p class="ticket__movie-slogan">You can't save the world alone.</p>
                         <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=0IOsk2Vlc4o'">Watch the trailer</button>
                         <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.html">Book movie</a>
+                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
                         </button>
                     </div>
                 </div>
