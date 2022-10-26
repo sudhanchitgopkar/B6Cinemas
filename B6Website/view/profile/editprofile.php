@@ -53,16 +53,16 @@
             <div class="innerPersonalInfo">
                 <div>
                 <p><b>First Name: </b>  </p>
-                <input name="firstName" id="firstName" contenteditable="true" placeholder=<?php echo $user['first_name'] ?>></input>
+                <input name="firstName" id="firstName" contenteditable="true" placeholder="First Name" value=<?php echo $user['first_name'] ?>></input>
                 <br>
                 <p><b>Last Name: </b>  </p>
-                <input name="lastName" id="lastName" contenteditable="true" placeholder=<?php echo $user['last_name'] ?>></input>
+                <input name="lastName" id="lastName" contenteditable="true" placeholder="Last Name" value=<?php echo $user['last_name'] ?>></input>
                 <br>
                 <p><b>Email:</b></p>
                     <p><?php echo $user['email'] ?></p>
                 <br>
                 <p><b>Phone Number:</b></p>
-                <input name="phone" id="phone" contenteditable="true" placeholder=<?php echo $user['phone'] ?>></input>
+                <input name="phone" id="phone" contenteditable="true" placeholder="Phone" value=<?php echo $user['phone'] ?>></input>
                 <br>
                 <p><b>Current Password:</b>   </p>
                 <input name="password" id="password" contenteditable="true"></input>
@@ -72,8 +72,8 @@
                 <br>
 
                 <!--Optional Info-->
-                <p><b>Home Address</b></p>
-                <p><b><?php echo $user['address']?></b></p>
+                <p><b>Home Address:</b></p><br>
+                <p><b><?php echo $user['address_']?></b></p>
                 <div class="addressInfo">
                     <p>Street:</p>
                     <input name="address_street" id="address_street"  contenteditable="true"></input>
@@ -89,7 +89,7 @@
                 </div>
                 <br>
                 <div id="personalInfo">
-                    <input type="checkbox" id="promotionStatus" name="promotionStatus"></input>
+                    <input type="checkbox" id="promotionStatus" name="promotionStatus" <?php echo ($user['promotion_opt_status'] == 1) ? 'checked="checked"' : ''; ?>></input>
                     <label for="promotionStatus">Recieve promotional emails</label>
                 </div>
             </div>
