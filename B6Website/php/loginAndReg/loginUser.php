@@ -7,6 +7,8 @@
 
     $login_user = filter_input(INPUT_POST, 'login_user_id');
     $login_pass = filter_input(INPUT_POST, 'login_password');
+    $remember = filter_input(INPUT_POST, 'remember');
+
 
     try {
         $query = 'SELECT email, password_, status_, type_, user_id FROM user WHERE email=:_email';
@@ -20,7 +22,14 @@
         if($info['status_'] == 1) {
             echo '<script>alert("You must activate your account before you can login.")</script>';
         } else if(password_verify($login_pass, $info['password_'])) {
-            // TODO start session with session variables for current logged in user
+
+             if (isset($remember)) {
+                setcookie("username", $login_user, time()+3600*24);
+                setcookie("password", $login_pass, time()+3600*24);
+                setcookie("remember", true, time()+3600*24);
+            }
+
+            // start session with session variables for current logged in user
             $_SESSION['loggedin'] = true;
             $_SESSION['userID'] = $info['user_id'];
             $_SESSION['userType'] = $info['type_'];

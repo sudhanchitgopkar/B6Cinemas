@@ -1,5 +1,6 @@
 <?php
     require_once("../database.php");
+    require('../../../email.php');
 
     // The beginning of the session
     session_start();
@@ -39,7 +40,7 @@
         $statement->closeCursor();
 
 
-        $query2 = 'SELECT password_ FROM user WHERE user_id=:user_id';
+        $query2 = 'SELECT email, password_ FROM user WHERE user_id=:user_id';
         $statement2 = $db->prepare($query2);
         $statement2->bindValue(':user_id', $_SESSION['userID']);
         $statement2->execute();
@@ -54,7 +55,9 @@
             $statement3->execute();
             $statement3->closeCursor();
         }
-
+    
+    $emailbody = "Hi $first_name, <br> A new update was made to your B6 profile. If this was not you, change your password immediately. <br>Cheers,<br>The Team at B6";  
+    sendEmail($info['email'], "Update to Your B6 Account", $emailbody);
     // Redirecting to the sign_in page
     header("Location: ../../view/profile/editProfile.php")
 
