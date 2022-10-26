@@ -5,6 +5,8 @@
     require_once('../database.php');
 
     $_SESSION['loggedin'] = false;
+
+    session_destroy();
 ?>
 
 <!DOCTYPE html>

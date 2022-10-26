@@ -13,9 +13,10 @@ $promotionStatus = filter_input(INPUT_POST, 'promotions');
 $status = filter_input(INPUT_POST, 'status');
 
 $address_street = filter_input(INPUT_POST, 'addressStreet');
+$address_city = filter_input(INPUT_POST, 'addressCity');
 $address_state = filter_input(INPUT_POST, 'addressState');
-$address_country = filter_input(INPUT_POST, 'addressCountry');
-$address = $address_street . ' ' . $address_state . ' ' . $address_country;
+$address_zip = filter_input(INPUT_POST, 'addressZip');
+$address = $address_street . ' ' . $address_city . ' ' . $address_state . ' ' . $address_zip;
 
 try {
 

@@ -3,6 +3,11 @@
 
     // The beginning of the session
     session_start();
+
+    if (!(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)) 
+    {
+        header("Location: ../loginAndReg/login.php");
+    }
     
     // Querys for matching sign-in info
     $query = 'SELECT * FROM user WHERE user_id=:user_id';
@@ -48,17 +53,17 @@
             <div class="innerPersonalInfo">
                 <div>
                 <p><b>First Name: </b>  </p>
-                <div id="firstName" contenteditable="true">
-                   <p><?php echo $user['first_name'] ?></p>
+                <div name= "id="firstName" contenteditable="true">
+                    <?php echo $user['first_name'] ?>
                 </div>
                 <br>
                 <p><b>Last Name: </b>  </p>
                 <div id="lastName" contenteditable="true">
-                    <?php echo $user['last_name'] ?>
+                  <?php echo $user['last_name'] ?>
                 </div>
                 <br>
                 <p><b>Email:</b></p>
-                <p><?php echo $user['email'] ?></p> 
+                    <p><?php echo $user['email'] ?></p>
                 <br>
                 <p><b>Phone Number:</b></p>
                 <div id="phone" contenteditable="true">
@@ -80,23 +85,23 @@
                 <p><b>Home Address</b></p>
                 <div class="addressInfo">
                     <p>Street:</p>
-                    <div id="address"  contenteditable="true">
+                    <div id="address_street"  contenteditable="true">
                         <?php echo $user['Address'] ?>
                         <p>            </p>
                     </div>
                     <br>
                     <p>City:</p>
-                    <div id="address"  contenteditable="true">
+                    <div id="address_city"  contenteditable="true">
                         <p>            </p>
                     </div>
                     <br>
                     <p>State: </p>
-                    <div id="address"  contenteditable="true">
+                    <div id="address_state"  contenteditable="true">
                         <p>            </p>
                     </div>
                     <br>
                     <p>Zipcode:</p>
-                    <div id="address"  contenteditable="true">
+                    <div id="address_zip"  contenteditable="true">
                         <p>            </p>
                     </div>
                 </div>
