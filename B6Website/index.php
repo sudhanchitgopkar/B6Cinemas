@@ -1,4 +1,9 @@
+<?php
+    session_start();
 
+    // connect to database
+    require_once('php/database.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +14,8 @@
     
     <!--Tab Logo-->
     <link rel="icon" href="images/WhiteB6.png" type="image/icon type">
+
+    <?php $i = $_SESSION['loggedin'] ?>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="view/main.css">
@@ -27,9 +34,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <button class="btn">
-                        <a class="nav-link" href="view/loginAndReg/login.html">Login</a>
-                    </button>
+                    <div id="loginToggle">
+                        <button class="btn">
+                            <a class="nav-link" href="view/loginAndReg/login.php">Login</a>
+                        </button>
+                    </div>
                 </li>
 
             </ul>
@@ -199,4 +208,13 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', (event) => {
+            var log = <?php echo $i ?>;
+
+            if (log) {
+                document.getElementById("loginToggle").innerHTML = '<button class="btn"><a class="nav-link" href="view/loginAndReg/logout.php">Logout</a></button><button class="btn"><a class="nav-link" href="view/profile/editprofile.php">Edit Profile</a></button>';
+            }
+        });
+    </script>
 </html>

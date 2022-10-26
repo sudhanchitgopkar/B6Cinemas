@@ -1,3 +1,17 @@
+<?php
+
+    session_start();
+
+    // connect to database
+    require_once('../database.php');
+
+    if (!(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)) 
+    {
+        header("Location: ../loginAndReg/login.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
