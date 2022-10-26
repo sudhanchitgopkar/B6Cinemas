@@ -50,7 +50,7 @@
             <button class = "formField" id = "btn" href = "loginConfirmation.html">login</button>
             <p class = "auxtext">New to B6? <a href="register.php"><b>Create an account.</b></a>
             <br>Forgot password? <a href="pwdReset.html"> <b>Reset it here.</a></b><br>
-                <input type="checkbox" id="remember" name="remember" value="true" checked=<?php $_COOKIE['remember']?>>
+                <input type="checkbox" id="remember" name="remember" value="true">
                 <label for="promotions">Remember Me</label><br>
             </p>    
         </form>

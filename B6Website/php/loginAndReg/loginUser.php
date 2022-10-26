@@ -20,14 +20,8 @@
 
         // if user is inactive, don't allow login
         if($info['status_'] == 1) {
-            echo '<script>alert("You must activate your account before you can login.")</script>';
+            header("Location: ../../view/loginAndReg/login.php");
         } else if(password_verify($login_pass, $info['password_'])) {
-
-             if (isset($remember)) {
-                setcookie("username", $login_user, time()+3600*24);
-                setcookie("password", $login_pass, time()+3600*24);
-                setcookie("remember", true, time()+3600*24);
-            }
 
             // start session with session variables for current logged in user
             $_SESSION['loggedin'] = true;
@@ -42,7 +36,6 @@
 
         } else {
             // Notify User their username/password was incorrect
-            echo '<script>alert("Your password is incorrect.")</script>';
             header("Location: ../../view/loginAndReg/login.php");
         }
 
