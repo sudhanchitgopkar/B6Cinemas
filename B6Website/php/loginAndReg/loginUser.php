@@ -29,7 +29,13 @@
             $_SESSION['loggedin'] = true;
             $_SESSION['userID'] = $info['user_id'];
             $_SESSION['userType'] = $info['type_'];
-            header("Location: ../../index.php");
+
+            if($info['type_'] == 2) {
+                header("location: ../../view/adminPortal/manageAccounts.html");
+            } else {
+                header("Location: ../../index.php");
+            }
+
         } else {
             // Notify User their username/password was incorrect
             header("Location: ../../view/loginAndReg/login.php");
