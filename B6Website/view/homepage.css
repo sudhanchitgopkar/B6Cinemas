@@ -70,4 +70,25 @@ iframe
  overflow-x: hidden;
 }
 
+
 .is-hidden { display: none; }
+
+
+.ticket__buy-btn {
+	cursor: pointer;
+	width: 100%;
+	background: #30415D;
+	color: #EDEDED;
+	padding: 15px 0;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: 5px;
+    margin: 5px;
+    width: 200px;
+}
+
+.logout-text {
+	padding-top: 100px;
+}

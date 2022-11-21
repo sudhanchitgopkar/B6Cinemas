@@ -1,3 +1,9 @@
+<?php
+    require("../database.php");
+    session_start();
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,9 +17,9 @@
 
   <body>
 
-    <div id="navBar">
+  <div id="navBar">
       <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
-          <a class="navbar-brand" href="../../index.php">
+          <a class="navbar-brand" href="adminIndex.html">
               <img src="../../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
              </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,15 +28,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                      <button>
-                          <a class="nav-link" href="../loginAndReg/login.html">Login</a>
-                      </button>
+                      <div id="loginToggle">
+                          <button class="btn">
+                              <a class="nav-link" href="../loginAndReg/logout.php">Logout</a>
+                          </button>
+                      </div>
                   </li>
-                  
               </ul>
           </div>
       </nav>  
-  </div>
+    </div>
     
     <div class="split left">
       <div class="nav-buttons">
@@ -45,37 +52,41 @@
         <h1>Add a Movie</h1>
         <br>
         <div class="text-forms">
-          <form>
+          <form action="../../php/adminStuff/newMovie.php" method="post">
               <label for="name">Title:</label>
-              <input type="text" id="name"><br>
+              <input type="text" name="title" id="title"><br>
               <label for="genre">Genre:</label>
-              <select id="genre">
+              <select id="genre" name="genre">
                 <option value="comedy">Comedy</option>
                 <option value="drama">Drama</option>
                 <option value="adventure">Adventure</option>
                 <option value="war">War</option>
               </select><br>
               <label for="cast">Cast:</label>
-              <input type="text" id="cast"><br>
+              <input type="text" name="cast" id="cast"><br>
               <label for="director">Director:</label>
-              <input type="text" id="director"><br>
+              <input type="text" name="director" id="director"><br>
               <label for="producer">Producer:</label>
-              <input type="text" id="producer"><br>
+              <input type="text" name="producer" id="producer"><br>
               <label for="review">Review:</label>
-              <input type="text" id="review"><br>
+              <input type="text" name="review" id="review"><br>
               <label for="rating">Rating:</label>
-              <select id="rating">
+              <select id="rating" name="rating">
                 <option value="E">E</option>
                 <option value="pg">PG</option>
                 <option value="pg13">PG-13</option>
                 <option value="R">R</option>
               </select><br>
-              <label class="desc-label" for="desc">Description:</label>
-              <textarea id="desc" rows="4" cols="50"> This is a sample movie description. It will be replaced with information from our database.</textarea><br>
+              <label for="trailerPic">Trailer Image:</label>
+              <input type="text" name="trailerPic" id="trailerPic"><br>
+              <label for="trailerVid">Trailer Video:</label>
+              <input type="text" name="trailerVid" id="trailerVid"><br>
+              <label class="desc-label" for="synopsis">Synopsis:</label>
+              <textarea id="synopsis" name="synopsis" rows="4" cols="50"> This is a sample movie synopsis. It will be replaced with information from our database.</textarea><br>
+              <button class = "add-button" id = "btn" href="manageMovies.html">Add Movie</button>
           </form>
         </div>
         <br>
-        <button class="add-button" onclick="location.href='manageMovies.html'">Add Movie</button>
       </div>
     </div>
   </body>

@@ -27,7 +27,7 @@
 
 <div id="navBar">
     <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../../index.php">
             <img src="../../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,9 @@
 </div>
 
 <div class="hero-container first">
-    <p>You are successfully logged out!</p>
+    <div class="logout-text">
+        <p>You are successfully logged out!</p>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

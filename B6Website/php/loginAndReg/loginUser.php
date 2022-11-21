@@ -29,7 +29,7 @@
             $_SESSION['userType'] = $info['type_'];
 
             if($info['type_'] == 2) {
-                header("location: ../../view/adminPortal/manageAccounts.html");
+                header("location: ../../view/adminPortal/adminIndex.html");
             } else {
                 header("Location: ../../index.php");
             }
