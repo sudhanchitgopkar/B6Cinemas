@@ -51,7 +51,7 @@ try {
     $statement->bindValue(':_status_', 1);
     $statement->bindValue(':_type_', 1);
     $statement->bindValue(':_address_', $address);
-    $statement->bindValue(':_promotion_opt_status', isset($promotionStatus));
+    $statement->bindValue(':_promotion_opt_status', intval($promotionStatus));
 
     $statement->execute();
     $statement->closeCursor();

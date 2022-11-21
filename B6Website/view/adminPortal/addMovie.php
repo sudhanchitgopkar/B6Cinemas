@@ -1,3 +1,9 @@
+<?php
+    require("../database.php");
+    session_start();
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -45,37 +51,37 @@
         <h1>Add a Movie</h1>
         <br>
         <div class="text-forms">
-          <form>
+          <form action="../../php/adminStuff/newMovie.php" method="post">
               <label for="name">Title:</label>
-              <input type="text" id="name"><br>
+              <input type="text" name="title" id="title"><br>
               <label for="genre">Genre:</label>
-              <select id="genre">
+              <select id="genre" name="genre">
                 <option value="comedy">Comedy</option>
                 <option value="drama">Drama</option>
                 <option value="adventure">Adventure</option>
                 <option value="war">War</option>
               </select><br>
               <label for="cast">Cast:</label>
-              <input type="text" id="cast"><br>
+              <input type="text" name="cast" id="cast"><br>
               <label for="director">Director:</label>
-              <input type="text" id="director"><br>
+              <input type="text" name="director" id="director"><br>
               <label for="producer">Producer:</label>
-              <input type="text" id="producer"><br>
+              <input type="text" name="producer" id="producer"><br>
               <label for="review">Review:</label>
-              <input type="text" id="review"><br>
+              <input type="text" name="review" id="review"><br>
               <label for="rating">Rating:</label>
-              <select id="rating">
+              <select id="rating" name="rating">
                 <option value="E">E</option>
                 <option value="pg">PG</option>
                 <option value="pg13">PG-13</option>
                 <option value="R">R</option>
               </select><br>
-              <label class="desc-label" for="desc">Description:</label>
-              <textarea id="desc" rows="4" cols="50"> This is a sample movie description. It will be replaced with information from our database.</textarea><br>
+              <label class="desc-label" for="synopsis">Synopsis:</label>
+              <textarea id="synopsis" name="synopsis" rows="4" cols="50"> This is a sample movie synopsis. It will be replaced with information from our database.</textarea><br>
+              <button class = "add-button" id = "btn" href="manageMovies.html">Add Movie</button>
           </form>
         </div>
         <br>
-        <button class="add-button" onclick="location.href='manageMovies.html'">Add Movie</button>
       </div>
     </div>
   </body>
