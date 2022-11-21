@@ -1,0 +1,45 @@
+.mainMovie {
+    padding-top:150px;
+    padding-left:20px;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+}
+iframe, img {
+    max-height: 50vh;
+}
+
+img {
+    max-height: 50vh;
+}
+
+.show_button {
+    cursor: pointer;
+	width: 100%;
+	background: #EDEDED;
+	color: #30415D;
+	padding: 15px;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: 5px;
+    margin: 5px;
+    align-self: right;
+    
+}
+
+.button_cont {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
