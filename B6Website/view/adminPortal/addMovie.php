@@ -76,6 +76,10 @@
                 <option value="pg13">PG-13</option>
                 <option value="R">R</option>
               </select><br>
+              <label for="trailerPic">Trailer Image:</label>
+              <input type="text" name="trailerPic" id="trailerPic"><br>
+              <label for="trailerVid">Trailer Video:</label>
+              <input type="text" name="trailerVid" id="trailerVid"><br>
               <label class="desc-label" for="synopsis">Synopsis:</label>
               <textarea id="synopsis" name="synopsis" rows="4" cols="50"> This is a sample movie synopsis. It will be replaced with information from our database.</textarea><br>
               <button class = "add-button" id = "btn" href="manageMovies.html">Add Movie</button>
