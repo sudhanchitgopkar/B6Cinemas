@@ -17,9 +17,9 @@
 
   <body>
 
-    <div id="navBar">
+  <div id="navBar">
       <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
-          <a class="navbar-brand" href="../../index.php">
+          <a class="navbar-brand" href="adminIndex.html">
               <img src="../../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
              </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,15 +28,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                      <button>
-                          <a class="nav-link" href="../loginAndReg/login.html">Login</a>
-                      </button>
+                      <div id="loginToggle">
+                          <button class="btn">
+                              <a class="nav-link" href="../loginAndReg/logout.php">Logout</a>
+                          </button>
+                      </div>
                   </li>
-                  
               </ul>
           </div>
       </nav>  
-  </div>
+    </div>
     
     <div class="split left">
       <div class="nav-buttons">
