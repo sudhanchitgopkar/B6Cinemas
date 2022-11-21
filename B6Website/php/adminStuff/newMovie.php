@@ -11,6 +11,8 @@ $producer = filter_input(INPUT_POST, 'producer');
 $synopsis = filter_input(INPUT_POST, 'synopsis');
 $review = filter_input(INPUT_POST, 'review');
 $rating = filter_input(INPUT_POST, 'rating');
+$trailerPic = filter_input(INPUT_POST, 'trailerPic');
+$trailerVid = filter_input(INPUT_POST, 'trailerVid');
 
 try {
     // Querying the database
@@ -26,8 +28,8 @@ try {
     $statement->bindValue(':_producer', $producer);
     $statement->bindValue(':_synopsis', $synopsis);
     $statement->bindValue(':_reviews', $review);
-    $statement->bindValue(':_trailer_picture', "test");
-    $statement->bindValue(':_trailer_video', "test");
+    $statement->bindValue(':_trailer_picture', $trailerPic);
+    $statement->bindValue(':_trailer_video', $trailerVid);
     $statement->bindValue(':_mpaa_rating', $rating);
 
 
