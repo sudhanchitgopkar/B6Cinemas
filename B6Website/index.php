@@ -5,6 +5,10 @@
     require_once('php/database.php');
 
     $i = $_SESSION['loggedin'];
+
+    
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +27,7 @@
     <title>B6 Cinemas</title>
 </head>
 
+<body>
 <div id="navBar">
     <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
         <a class="navbar-brand" href="#">
@@ -56,158 +61,79 @@
     <img src="images/B6CinemaBigLogo.png">
     <h1><b>B6 Cinemas</b></h1>
 </div>
+<br>
+
 
 <!--Main section-->
 <div>
-    <div>
+    
+    <h1>Now Playing</h1><br>
+    <div class="hero-container first" >
+        <?php
+            $query = 'SELECT * FROM movie';
 
-        <div class="hero-container first" >
-            <h1>Now Playing</h1><br>
-            <div class="main-container">
-                <div class="poster-container">
-                    <a href="#"><img src="https://i.ibb.co/ThPNnzM/blade-runner.jpg" class="poster" /></a>
-                </div>
-                <div class="ticket-container">
-                    <div class="ticket__content">
-                        <h4 class="ticket__movie-title">Blade Runner 2049</h4>
-                        <p class="ticket__movie-slogan">
-                            More human than human is our motto.
-                        </p>
-                        <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=gCcx85zbxz4'">Watch the trailer</button>
-                        <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            $statement = $db->prepare($query);
+            $statement->execute();
+           
+            while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                if($row['movie_id'] < 7) {
+                    echo "
+                    <div class='main-container'>
+                    <movie-card 
+                        rating=".$row["mpaa_rating"].
+                        " movie='".$row["title"] . 
+                        "' page= ../B6Website/movie/movie.php?id=".$row["movie_id"].
+                        " poster=".$row["trailer_picture"].">
+                    </movie-card>  
+                </div>";
+                }
+                
+            }
+        ?>
+            
+    </div> 
 
-            <div class="main-container">
-                <div class="poster-container">
-                    <a href="#"><img src="https://i.ibb.co/Zd51z5c/justice-league.jpg" class="poster" /></a>
-                </div>
-                <div class="ticket-container">
-                    <div class="ticket__content">
-                        <h4 class="ticket__movie-title">Justice League</h4>
-                        <p class="ticket__movie-slogan">You can't save the world alone.</p>
-                        <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=r9-DM9uBtVI'">Watch the trailer</button>
-                        <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="main-container">
-                <div class="poster-container">
-                    <a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYmMxZWRiMTgtZjM0Ny00NDQxLWIxYWQtZDdlNDNkOTEzYTdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="poster" /></a>
-                </div>
-                <div class="ticket-container">
-                    <div class="ticket__content">
-                        <h4 class="ticket__movie-title">Thor: Love and Thunder</h4>
-                        <p class="ticket__movie-slogan">
-                            “Let me tell you the story of the space viking, Thor Odinson…”
-                        </p>
-                        <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=Go8nTmfrQd8'">Watch the trailer</button>
-                        <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <h1 id="soon">Coming Soon</h1>
+    <div class="hero-container second" >
+           
+            
+    <?php
+            $query = 'SELECT * FROM movie';
 
-            <div class="main-container">
-                <div class="poster-container">
-                    <a href="#"><img src="https://londonmumsmagazine.com/wp-content/uploads/2022/08/movie-review-bullet-train.jpeg" class="poster" /></a>
-                </div>
-                <div class="ticket-container">
-                    <div class="ticket__content">
-                        <h4 class="ticket__movie-title">Bullet Train</h4>
-                        <p class="ticket__movie-slogan">You can't save the world alone.</p>
-                        <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=0IOsk2Vlc4o'">Watch the trailer</button>
-                        <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+            $statement = $db->prepare($query);
+            $statement->execute();
+           
+            while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                if($row['movie_id'] >= 7) {
+                    echo "
+                    <div class='main-container'>
+                    <movie-card 
+                        rating=".$row["mpaa_rating"].
+                        " movie='".$row["title"] . 
+                        "' page= ../B6Website/movie/movie.php?id=".$row["movie_id"].
+                        " poster=".$row["trailer_picture"].">
+                    </movie-card>  
+                </div>";
+                }
+                
+            }
+        ?>
+
     </div>
-    <div>
-        <div class="hero-container">
-            <h1>Coming Soon</h1>
-            <div class="main-container">
-                <div class="poster-container">
-                    <a href="#"><img src="https://i.ibb.co/ThPNnzM/blade-runner.jpg" class="poster" /></a>
-                </div>
-                <div class="ticket-container">
-                    <div class="ticket__content">
-                        <h4 class="ticket__movie-title">Blade Runner 2049</h4>
-                        <p class="ticket__movie-slogan">
-                            More human than human is our motto.
-                        </p>
-                        <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=gCcx85zbxz4'">Watch the trailer</button>
-                        <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="main-container">
-                <div class="poster-container">
-                    <a href="#"><img src="https://i.ibb.co/Zd51z5c/justice-league.jpg" class="poster" /></a>
-                </div>
-                <div class="ticket-container">
-                    <div class="ticket__content">
-                        <h4 class="ticket__movie-title">Justice League</h4>
-                        <p class="ticket__movie-slogan">You can't save the world alone.</p>
-                        <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=r9-DM9uBtVI'">Watch the trailer</button>
-                        <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="main-container">
-                <div class="poster-container">
-                    <a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYmMxZWRiMTgtZjM0Ny00NDQxLWIxYWQtZDdlNDNkOTEzYTdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="poster" /></a>
-                </div>
-                <div class="ticket-container">
-                    <div class="ticket__content">
-                        <h4 class="ticket__movie-title">Thor: Love and Thunder</h4>
-                        <p class="ticket__movie-slogan">
-                            “Let me tell you the story of the space viking, Thor Odinson…”
-                        </p>
-                        <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=Go8nTmfrQd8'">Watch the trailer</button>
-                        <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="main-container">
-                <div class="poster-container">
-                    <a href="#"><img src="https://londonmumsmagazine.com/wp-content/uploads/2022/08/movie-review-bullet-train.jpeg" class="poster" /></a>
-                </div>
-                <div class="ticket-container">
-                    <div class="ticket__content">
-                        <h4 class="ticket__movie-title">Bullet Train</h4>
-                        <p class="ticket__movie-slogan">You can't save the world alone.</p>
-                        <button class="ticket__buy-btn" onclick="location.href='https://www.youtube.com/watch?v=0IOsk2Vlc4o'">Watch the trailer</button>
-                        <button class="ticket__buy-btn">
-                            <a href="view/buyTickFlow/selectShowtime.php">Book movie</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <br>
+    <div class="space"></div>
 </div>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="movie-card.js"></script>
+    <script type="text/javascript">
+    </script>
+    <!--
     <script type="text/javascript">
         window.addEventListener('load', (event) => {
             var log = <?php echo $i ?>;
@@ -217,4 +143,7 @@
             }
         });
     </script>
+    -->
+
+   </body> 
 </html>
