@@ -6,7 +6,7 @@
     $date = filter_input(INPUT_POST, 'date');
     $time = filter_input(INPUT_POST, 'time');
     $showroom = filter_input(INPUT_POST, 'showroom');
-    $movieID = filter_input(INPUT_POST, 'movieID');
+    $movieID = $_GET['id'];
 
     $query = "SELECT * FROM show_";
     $statement = $db->prepare($query);
@@ -39,8 +39,7 @@
     $insertionStatement->execute();
     $insertionStatement->closeCursor();
 
-    header("Location: ../../view/adminPortal/managePromotions.php?request=valid");
-   } else {
-    header("Location: ../../view/adminPortal/managePromotions.php?request=invalid");
-   } //if
+    header("Location: ../../view/adminPortal/showtime.php?id=".$movieID);
+   }
+
 ?>

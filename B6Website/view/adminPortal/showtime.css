@@ -1,0 +1,29 @@
+h1 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.fancy-table {
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
+    justify-content: center;
+}
+
+table, th, td {
+    border: 1px solid;
+    text-align:center;
+  }
+
+  button {
+    align-items: center;
+    max-width: 20vw;
+    margin: 20px;
+    padding: 10px;
+  }
+
+.newShow {
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
