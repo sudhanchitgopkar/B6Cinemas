@@ -1,5 +1,5 @@
 <?php  
-    require("../database.php");
+   require_once('../../controller/database.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!--Tab Logo-->
-    <link rel="icon" href="../../images/WhiteB6.png" type="image/icon type">
+    <link rel="icon" href="../images/WhiteB6.png" type="image/icon type">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../main.css">
@@ -22,7 +22,7 @@
     <div id="navBar">
         <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
             <a class="navbar-brand" href="../index.php">
-                <img src="../../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
+                <img src="../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
                </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,9 +41,9 @@
     </div>
 
     <div class="card" id = "register">
-        <img src="../../images/popcornIcon.png" class = "icon"></img>
+        <img src="../images/popcornIcon.png" class = "icon"></img>
         <h3 class = "loginText">Welcome to B6</h3>
-         <form class="loginForm" action="../../php/loginAndReg/registerUser.php" method="post">
+         <form class="loginForm" action="../../model/loginAndReg/registerUser.php" method="post">
             <hr>
             <label for="firstName">👤</label> 
             <input class = "formField" name = "firstName" id="firstName" type="text" placeholder="First Name*"/>

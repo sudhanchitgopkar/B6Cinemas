@@ -1,7 +1,7 @@
 <?php
 // connect to database
 
-    require_once('../database.php');
+require_once('../../controller/database.php');
 
     $date = filter_input(INPUT_POST, 'date');
     $time = filter_input(INPUT_POST, 'time');
@@ -38,8 +38,9 @@
     $insertionStatement->bindValue(':_time', $time);
     $insertionStatement->execute();
     $insertionStatement->closeCursor();
-
-    header("Location: ../../view/adminPortal/showtime.php?id=".$movieID);
-   }
-
+    header("Location: ../../view/adminPortal/showtime.php?id=".$movieID."&success=true");
+}
+else {
+    header("Location: ../../view/adminPortal/showtime.php?id=".$movieID."&success=false");
+}
 ?>

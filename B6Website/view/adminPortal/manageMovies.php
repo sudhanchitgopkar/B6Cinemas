@@ -2,7 +2,7 @@
     session_start();
 
     // connect to database
-    require_once('../../php/database.php');
+    require_once('../../controller/database.php');
 
     $i = $_SESSION['loggedin'];
  
@@ -24,7 +24,7 @@
     <div id="navBar">
         <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
             <a class="navbar-brand" href="adminIndex.html">
-                <img src="../../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
+                <img src="../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
                </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,8 +46,9 @@
     <div class="split left">
       <div class="nav-buttons">
         <button class="admin-button" onclick="location.href='manageAccounts.html'">Manage Accounts</a></button>
-        <button class="admin-button" onclick="location.href='manageMovies.html'">Manage Movies</button>
-        <button class="admin-button" onclick="location.href='managePromotions.html'">Manage Promotions</button>
+        <button class="admin-button" onclick="location.href='manageMovies.php'">Manage Movies</button>
+        <button class="admin-button" onclick="location.href='managePromotions.php'">Manage Promotions</button>
+        <button class="admin-button"  onclick="location.href='addMovie.php'">Add Movie</button>
       </div>
     </div>
     
@@ -81,7 +82,7 @@
                
             </div>
         </div>
-        <button class="add-movie"  onclick="location.href='addMovie.php'">Add Movie</button>
+        
       </div>
     </div>
   </body>

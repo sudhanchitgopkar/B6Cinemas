@@ -2,7 +2,7 @@
     session_start();
 
     // connect to database
-    require_once('../../php/database.php');
+    require_once('../../controller/database.php');
 
     $id = $_GET['id'];
     $query = 'SELECT * FROM movie WHERE movie_id=:_movie_id';
@@ -29,7 +29,7 @@
     <div id="navBar">
             <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
                 <a class="navbar-brand" href="adminIndex.html">
-                    <img src="../../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
+                    <img src="../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -50,6 +50,11 @@
 
     <div>
         <h1><b><?php echo $movie['title']?></b></h1>
+        <?php $valid = $_GET["success"];
+            if ($valid !== null && $valid == "false") {
+                echo "<h4 style = text-align:center;> This showtime is already taken. Please select another. </h4>";
+            }
+            ?>
     </div>
 
     <h1>Showtimes</h1>
@@ -63,7 +68,7 @@
             </tr>
           </thead>
           <?php
-              require_once('../database.php');
+              require_once('../../controller/database.php');
               $query = 'SELECT * FROM show_';
               $statement = $db->prepare($query);
               $statement->execute();
@@ -74,16 +79,16 @@
                    " <td>" . $row['date'] . " </td>" . 
                    " <td>" . $row['time'] . " pm </td>" . 
                    " <td>" . $row['showroom_id'] . " </td>" .  
-                   " <td>" . "<form method='post' action = '../../php/adminStuff/deleteShowtime.php?id=" . $row['show_id'] .
+                   " <td>" . "<form method='post' action = '../../model/adminStuff/deleteShowtime.php?id=" . $row['show_id'] .
                    "'> <button> Delete </button> </form></td>" .
                    " </tr>";
                }
             }
-              ?>
+            ?>
       </table>
       <br>
     <div class="newShow">
-        <form action="../../php/adminStuff/scheduleMovie.php?id=<?php echo $_GET["id"];?>" method="post">
+        <form action="../../model/adminStuff/scheduleMovie.php?id=<?php echo $_GET["id"];?>" method="post">
             <label for="date">Show Date: </label>
             <input type="date" name="date" id="date">
             <br>
@@ -100,7 +105,7 @@
             <label for="showroom">Show Room</label>
             <select name="showroom" id="showroom">
             <?php
-              require_once('../database.php');
+              require_once('../../controller/database.php');
               $query = 'SELECT * FROM showroom';
               $statement = $db->prepare($query);
               $statement->execute();

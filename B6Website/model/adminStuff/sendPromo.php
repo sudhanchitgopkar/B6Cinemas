@@ -2,7 +2,7 @@
 // connect to database
 
 require('../../../email.php');
-require_once('../database.php');
+require_once('../../controller/database.php');
 
     $promoID = $_GET["id"];
     $query = "SELECT promotion_id, start_, end_, promotion_key, promotion_amount FROM promotion

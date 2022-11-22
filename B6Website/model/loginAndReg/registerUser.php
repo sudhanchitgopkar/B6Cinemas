@@ -1,7 +1,7 @@
 <?php
 // connect to database
 require('../../../email.php');
-require_once('../database.php');
+require_once('../../controller/database.php');
 
 // Setting variables for the contents of the form
 $first_name = filter_input(INPUT_POST, 'firstName');

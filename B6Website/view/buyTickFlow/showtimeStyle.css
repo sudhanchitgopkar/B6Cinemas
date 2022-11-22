@@ -76,14 +76,14 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] {
-    content: url('../../images/chair.png');
+    content: url('../../view/images/chair.png');
     appearance: none;
     display: block;
     width: 4vw;
 }
 
 input[type="checkbox"]:checked {
-    content: url('../../images/selectedChair.png');
+    content: url('../../view/images/selectedChair.png');
 }
   
 .checkout-button {

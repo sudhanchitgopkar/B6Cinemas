@@ -1,6 +1,6 @@
 <?php
-    require_once("../database.php");
-    require('../../../email.php');
+require_once('../../controller/database.php');
+require('../../../email.php');
 
     // The beginning of the session
     session_start();

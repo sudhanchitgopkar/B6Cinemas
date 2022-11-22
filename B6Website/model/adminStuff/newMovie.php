@@ -1,6 +1,6 @@
 <?php
 // connect to database
-require_once('../database.php');
+require_once('../../controller/database.php');
 
 // Setting variables for the contents of the form
 $title = filter_input(INPUT_POST, 'title');

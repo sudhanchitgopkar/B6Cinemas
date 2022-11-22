@@ -1,6 +1,6 @@
 <?php
 // connect to database
-require_once('../database.php');
+require_once('../../controller/database.php');
 
 try {
     $promoID = $_GET["id"];

@@ -1,6 +1,6 @@
 <?php
     // connect to database
-    require_once('../database.php');
+    require_once('../../controller/database.php');
     require('../../../email.php');
     
     $login_email = filter_input(INPUT_POST, 'login_email');
