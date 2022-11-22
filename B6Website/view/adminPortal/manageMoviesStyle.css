@@ -38,6 +38,7 @@ body {
     left: 55%;
     transform: translate(-50%, -50%);
     text-align: center;
+    padding-top: 100px;
 }
 
 .admin-button {
@@ -57,7 +58,7 @@ body {
 }
 
 .movie-container {
-    position: relative;
+    position: absolute;
     height: 300px;
 }
 
@@ -69,7 +70,8 @@ body {
 }
 
 .ticket-container {
-	height: 425px;
+    padding-bottom: 150px;
+	height: 150px;
 }
 
 .add-movie {
@@ -84,4 +86,12 @@ body {
 
 .add-movie:hover {
     background-color: #8EAEBD;
+}
+
+.poster-container img {
+    max-height: 50vh;
+}
+
+.ticket__movie-title {
+    color: #EDEDED;
 }
