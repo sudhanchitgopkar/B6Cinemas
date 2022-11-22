@@ -18,7 +18,7 @@
 <body>
     <div id="navBar">
         <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
-            <a class="navbar-brand" href="adminIndex.html">
+            <a class="navbar-brand" href="../../index.php">
                 <img src="../../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
                </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,16 +27,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <div id="loginToggle">
-                            <button class="btn">
-                                <a class="nav-link" href="../loginAndReg/logout.php">Logout</a>
-                            </button>
-                        </div>
+                        <button>
+                            <a class="nav-link" href="../loginAndReg/login.html">Login</a>
+                        </button>
                     </li>
+                    
                 </ul>
             </div>
         </nav>  
-      </div>
+    </div> 
       
     <!--Main section-->
 
@@ -53,19 +52,19 @@
             <h1>New Promotion</h1>
             <br>
               <div class="text-forms">
-                <form>
-                    <label for="name">Promotion Name:</label>
-                    <input type="text" id="name"><br>
+                <form action="../../php/adminStuff/addPromo.php" method="post">
                     <label for="code">Promotion Code:</label>
-                    <input type="text" id="code"><br>
+                    <input type="text" name = "code" id="code"><br>
+                    <label for="code">Promotion Amount:</label>
+                    <input type="text" name = "amount" id="amount"><br>
                     <label for="start">Start Date:</label>
-                    <input type="text" id="start"><br>
+                    <input type="text" name = "start" id="start"><br>
                     <label for="end">End Date:</label>
-                    <input type="text" id="end">
+                    <input type="text" name = "end" id="end">
+                    <button class="add-button" onclick="location.href='managepromotions.html'">Create</button>
                 </form>
               </div>
             <br>
-            <button class="add-button" onclick="location.href='managepromotions.html'">Create</button>
         </div>
       </div>
 </body>
