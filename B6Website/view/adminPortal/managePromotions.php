@@ -36,7 +36,7 @@
       <div class="nav-buttons">
         <button class="admin-button" onclick="location.href='manageAccounts.html'">Manage Accounts</a></button>
         <button class="admin-button" onclick="location.href='manageMovies.html'">Manage Movies</button>
-        <button class="admin-button" onclick="location.href='managePromotions.html'">Manage Promotions</button>
+        <button class="admin-button" onclick="location.href='managePromotions.php'">Manage Promotions</button>
       </div>
     </div>
     
@@ -70,8 +70,14 @@
                    " <td>" . $row['promotion_amount'] . " </td>" . 
                    " <td> <form method='post' action = '../../php/adminStuff/sendPromo.php?id=" . $row['promotion_id'] .
                    "'> <button> Send </button> </form></td>" . 
-                   " " . 
-                   " </tr>";
+                   " <td> ";
+                   if($row['sent_status'] == 0) {
+                     echo "<form method='post' action = '../../php/adminStuff/deletePromo.php?id=" . $row['promotion_id'] .
+                     "'> <button> Delete </button> </form>";
+                   } else {
+                     echo "N/A";
+                   }
+                   echo "</td></tr>";
                }
               ?>
       </table>

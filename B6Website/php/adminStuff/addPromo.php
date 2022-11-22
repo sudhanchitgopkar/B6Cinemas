@@ -11,7 +11,7 @@ $endDate = filter_input(INPUT_POST, 'end');
 try {
     // Querying the database
     $query = 'INSERT INTO promotion
-        (start_, end_, promotion_key, promotion_amount, sent_status))
+        (start_, end_, promotion_key, promotion_amount, sent_status)
         VALUES 
         (:_start, :_end, :_promotion_key, :_promotion_amount, :_sent_status)';
     $statement = $db->prepare($query);
@@ -21,12 +21,10 @@ try {
     $statement->bindValue(':_promotion_amount', $amount);
     $statement->bindValue(':_sent_status', 0);
 
-
-
     $statement->execute();
     $statement->closeCursor();
 
-    // Redirecting to the sign_in page
+    // Redirecting to the promotions page
     header("Location: ../../view/adminPortal/managePromotions.php");
 
 } catch(PDOException $e) {
