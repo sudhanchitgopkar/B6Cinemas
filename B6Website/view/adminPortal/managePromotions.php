@@ -22,9 +22,11 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                      <button>
-                          <a class="nav-link" href="../loginAndReg/login.html">Login</a>
-                      </button>
+                        <div id="loginToggle">
+                            <button class="btn">
+                                <a class="nav-link" href="../loginAndReg/logout.php">Logout</a>
+                            </button>
+                        </div>
                   </li>
                   
               </ul>
