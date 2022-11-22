@@ -53,7 +53,7 @@
 
             <h1 class="form-inline">
                 <button class="show_button">
-                    <a href="../view/buyTickFlow/selectShowtime.php">Showtimes</a>
+                    <a href="../view/buyTickFlow/selectShowtime.php?id=<?php echo $id;?>">Showtimes</a>
                 </button>
             </h1>
         </div>

@@ -87,6 +87,7 @@
                         rating=".$row["mpaa_rating"].
                         " movie='".$row["title"] . 
                         "' page= ../B6Website/movie/movie.php?id=".$row["movie_id"].
+                        " genre=".$row["genre"].
                         " poster=".$row["trailer_picture"].">
                     </movie-card>  
                 </div>";
@@ -116,6 +117,7 @@
                         rating=".$row["mpaa_rating"].
                         " movie='".$row["title"] . 
                         "' page= ../B6Website/movie/movie.php?id=".$row["movie_id"].
+                        " genre=".$row["genre"].
                         " poster=".$row["trailer_picture"].">
                     </movie-card>  
                 </div>";

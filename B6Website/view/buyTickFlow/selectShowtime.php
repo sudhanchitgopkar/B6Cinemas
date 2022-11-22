@@ -56,6 +56,24 @@
 
     <br><br>
     <h1>Select Showtime</h1>
+    <?php
+        $movieID = $_GET["id"];
+        $query = 'SELECT * FROM show_';
+        $statement = $db->prepare($query);
+        $statement->execute();
+
+        echo "<div class='showtime-buttons'>";
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            if ($row["movie_id"] == $movieID) {
+                if ($row["time"] < 12) $daytime =  "AM";
+                else $daytime = "PM";
+                echo " <button class='time-buttons'>" . $row["date"] . ", " .
+                $row["time"] % 12 . $daytime . "</button>";
+            } //if
+        } //while
+        echo "</div>";
+    ?>
+    <!--
     <div>
         <p class="showtime-dates">Friday, September 30th, 2022</p>
         <div class="showtime-buttons">
@@ -71,6 +89,7 @@
             <button class="time-buttons">5:00 PM</button>
         </div>
     </div>
+    -->
 
     <h1>Select Seats</h1>
     <div class="theater-seats">
@@ -423,3 +442,5 @@
         }
     });
 </script>
+
+

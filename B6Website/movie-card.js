@@ -17,7 +17,7 @@ template.innerHTML = `
 	left: 20px;
 }
 
-.is-hidden { display: none; }
+.is-hidden { visibility: hidden; }
 
 .poster {
 	width: 100%;
@@ -143,6 +143,9 @@ a {
 	position: absolute;
 }
 
+h6 {
+	display: none;
+}
 </style>
 
 <div class="movie-card">
@@ -158,6 +161,7 @@ a {
 			<a><button class="ticket__buy-btn" onclick="myFunction()">
 			More Information
 		</button></a>
+		<h6></h6>
 		</div>
     </div>
 	
@@ -174,9 +178,11 @@ function liveSearch() {
     let search_query = document.getElementById("searchbox").value;
     // Loop through the cards
     for (var i = 0; i < cards.length; i++) {
+		console.log(cards[i].getAttribute('genre'));
 		const box = document.getElementById('box');
         // If the text is within the card...
-        if(cards[i].getAttribute('movie').toLowerCase().includes(search_query.toLowerCase())) {
+        if(cards[i].getAttribute('movie').toLowerCase().includes(search_query.toLowerCase())
+		|| cards[i].getAttribute('genre').toLowerCase().includes(search_query.toLowerCase())) {
             // ...remove the `.is-hidden` class.
             cards[i].classList.remove("is-hidden");
         } else {
@@ -204,6 +210,7 @@ class movieCard extends HTMLElement{
 	 this.shadowRoot.querySelector('p').innerText = this.getAttribute('rating');
 	 this.shadowRoot.querySelector('img').src = this.getAttribute('poster');  
 	 this.shadowRoot.querySelector('a').href=this.getAttribute('page');
+	 this.shadowRoot.querySelector('h6').innerText = this.getAttribute('genre');
 	 console.log(this.getAttribute('page'));
  } 
 
