@@ -13,7 +13,7 @@
 
     <div id="navBar">
       <nav class="navbar navbar-expand-lg sticky-top navbar-light ">
-          <a class="navbar-brand" href="../../index.php">
+          <a class="navbar-brand" href="adminIndex.html">
               <img src="../../images/B6 Cinema (2).png" width="70" height="70" class="d-inline-block align-center" alt="B6 Cinemas logo">
              </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,9 +22,11 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                      <button>
-                          <a class="nav-link" href="../loginAndReg/login.html">Login</a>
-                      </button>
+                        <div id="loginToggle">
+                            <button class="btn">
+                                <a class="nav-link" href="../loginAndReg/logout.php">Logout</a>
+                            </button>
+                        </div>
                   </li>
                   
               </ul>
@@ -36,7 +38,7 @@
       <div class="nav-buttons">
         <button class="admin-button" onclick="location.href='manageAccounts.html'">Manage Accounts</a></button>
         <button class="admin-button" onclick="location.href='manageMovies.html'">Manage Movies</button>
-        <button class="admin-button" onclick="location.href='managePromotions.html'">Manage Promotions</button>
+        <button class="admin-button" onclick="location.href='managePromotions.php'">Manage Promotions</button>
       </div>
     </div>
     
@@ -70,8 +72,14 @@
                    " <td>" . $row['promotion_amount'] . " </td>" . 
                    " <td> <form method='post' action = '../../php/adminStuff/sendPromo.php?id=" . $row['promotion_id'] .
                    "'> <button> Send </button> </form></td>" . 
-                   " " . 
-                   " </tr>";
+                   " <td> ";
+                   if($row['sent_status'] == 0) {
+                     echo "<form method='post' action = '../../php/adminStuff/deletePromo.php?id=" . $row['promotion_id'] .
+                     "'> <button> Delete </button> </form>";
+                   } else {
+                     echo "N/A";
+                   }
+                   echo "</td></tr>";
                }
               ?>
       </table>

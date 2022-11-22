@@ -24,7 +24,7 @@ try {
     $statement->execute();
     $statement->closeCursor();
 
-    // Redirecting to the sign_in page
+    // Redirecting to the promotions page
     header("Location: ../../view/adminPortal/managePromotions.php");
 
 } catch(PDOException $e) {
