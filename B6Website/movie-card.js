@@ -17,6 +17,8 @@ template.innerHTML = `
 	left: 20px;
 }
 
+.is-hidden { display: none; }
+
 .poster {
 	width: 100%;
 	box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
@@ -165,7 +167,33 @@ function myFunction() {
 	console.log("click");
 }
 
- 
+function liveSearch() {
+    // Locate the card elements
+    let cards = document.querySelectorAll('movie-card')
+    // Locate the search input
+    let search_query = document.getElementById("searchbox").value;
+    // Loop through the cards
+    for (var i = 0; i < cards.length; i++) {
+		const box = document.getElementById('box');
+        // If the text is within the card...
+        if(cards[i].getAttribute('movie').toLowerCase().includes(search_query.toLowerCase())) {
+            // ...remove the `.is-hidden` class.
+            cards[i].classList.remove("is-hidden");
+        } else {
+        	// Otherwise, add the class.
+        	cards[i].classList.add("is-hidden");
+        }
+    }
+            
+    let typingTimer;        
+    let typeInterval = 500; // Half a second
+    let searchInput = document.getElementById('searchbox');
+
+    searchInput.addEventListener('keyup', () => {
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(liveSearch, typeInterval);
+    });
+}
 
 class movieCard extends HTMLElement{
  constructor(){
