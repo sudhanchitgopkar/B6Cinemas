@@ -5,10 +5,7 @@
     require_once('php/database.php');
 
     $i = $_SESSION['loggedin'];
-
-    
-
-    
+ 
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +45,6 @@
 
             </ul>
             <form class="form-inline">
-                <input class="form-control" type="search" placeholder="Search Movies" aria-label="Search">
                 <button class="btn" type="submit">Search</button>
             </form>
         </div>
@@ -66,8 +62,15 @@
 
 <!--Main section-->
 <div>
-    
     <h1>Now Playing</h1><br>
+    <input 
+        placeholder="Search Movies"
+        class="form-control"
+        type="search" 
+        oninput="liveSearch()" 
+        id="searchbox" 
+    >
+
     <div class="hero-container first" >
         <?php
             $query = 'SELECT * FROM movie';
@@ -78,7 +81,7 @@
             while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 if($row['movie_id'] < 7) {
                     echo "
-                    <div class='main-container'>
+                    <div class='main-container' id='box'>
                     <movie-card 
                         rating=".$row["mpaa_rating"].
                         " movie='".$row["title"] . 
@@ -131,9 +134,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="movie-card.js"></script>
-    <script type="text/javascript">
-    </script>
-    <!--
+    
     <script type="text/javascript">
         window.addEventListener('load', (event) => {
             var log = <?php echo $i ?>;
@@ -142,8 +143,7 @@
                 document.getElementById("loginToggle").innerHTML = '<button class="btn"><a class="nav-link" href="view/loginAndReg/logout.php">Logout</a></button><button class="btn"><a class="nav-link" href="view/profile/editprofile.php">Edit Profile</a></button>';
             }
         });
-    </script>
-    -->
-
+    </script> 
+    
    </body> 
 </html>
