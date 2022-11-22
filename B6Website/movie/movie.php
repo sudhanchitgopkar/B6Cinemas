@@ -63,16 +63,20 @@
 <div class="mainMovie">
     <h1><?php echo $movie['title']?></h1>
     <br>
+    <div class="media">
+        <img src=<?php echo $movie['trailer_picture']?>></img>
+    </div>
+    <br>
+    <div class = "info">
     <h2>Cast: <?php echo $movie['cast']?></h2>
     <h2>Director: <?php echo $movie['director']?></h2>
     <h2>Producer: <?php echo $movie['producer']?></h2>
     <h2>Reviews: <?php echo $movie['reviews']?></h2>
     <h2>MPAA Rating: <?php echo $movie['mpaa_rating']?></h2>
     <br>
-    <div class="media">
-        <img src=<?php echo $movie['trailer_picture']?>></img>
-    </div>
     <h2> <b>Synopsis:</b>  <?php echo $movie['synopsis']?></h2>
+    </div>
+    <br>
     <div class="media">
         <iframe width=500px height=300px src=<?php echo $movie['trailer_video']?>></iframe>
     </div>

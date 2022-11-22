@@ -44,8 +44,16 @@
                 </li>
 
             </ul>
+            
             <form class="form-inline">
-                <button class="btn" type="submit">Search</button>
+            <input 
+                placeholder="Search Movies"
+                class="form-control"
+                ype="search" 
+                oninput="liveSearch()" 
+                id="searchbox" 
+            >
+               <!--<button class="btn" type="submit">Search</button>-->
             </form>
         </div>
     </nav>
@@ -63,13 +71,6 @@
 <!--Main section-->
 <div>
     <h1>Now Playing</h1><br>
-    <input 
-        placeholder="Search Movies"
-        class="form-control"
-        type="search" 
-        oninput="liveSearch()" 
-        id="searchbox" 
-    >
 
     <div class="hero-container first" >
         <?php
