@@ -11,6 +11,7 @@
 
 .time-buttons:hover {
     background-color: #031424;
+    color: white;
 }
 
 .showtime-dates {
@@ -66,6 +67,10 @@ input[type="checkbox"] {
     text-align: center;
 }
 
+.seat {
+    padding: 0px 20px 0px 20px;
+}
+
 .select-container {
     position: relative;
     width: 50%;
@@ -75,15 +80,15 @@ input[type="checkbox"] {
     padding: 50px 50px 50px 50px;
 }
 
-input[type="checkbox"] {
-    content: url('../../view/images/chair.png');
+input[type="checkbox"]:not(:checked) {
+    content: url('../images/chair.png');
     appearance: none;
     display: block;
     width: 4vw;
 }
 
 input[type="checkbox"]:checked {
-    content: url('../../view/images/selectedChair.png');
+    content: url('../images/selectedChair.png');
 }
   
 .checkout-button {
