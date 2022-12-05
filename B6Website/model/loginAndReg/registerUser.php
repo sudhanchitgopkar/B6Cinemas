@@ -1,6 +1,6 @@
 <?php
 // connect to database
-require('../../../email.php');
+//require('../../../email.php');
 require_once('../../controller/database.php');
 
 // Setting variables for the contents of the form
@@ -103,8 +103,8 @@ try {
         $statement3->execute();
     }
 
-    $emailBody = "Hello,<br>Thanks for joining B6Cinemas! Please use the link below to confirm your account and start browsing!<br>http://localhost/B6Website/view/loginAndReg/activateUser.php?verify=$email <br>If you did not send this reset request, please ignore this email.<br>Thanks, The Team at B6.";
-    sendEmail($email,"Verify Your B6 Account",$emailBody);
+    //$emailBody = "Hello,<br>Thanks for joining B6Cinemas! Please use the link below to confirm your account and start browsing!<br>http://localhost/B6Website/view/loginAndReg/activateUser.php?verify=$email <br>If you did not send this reset request, please ignore this email.<br>Thanks, The Team at B6.";
+    //sendEmail($email,"Verify Your B6 Account",$emailBody);
 
     // Redirecting to the sign_in page
     header("Location: ../../view/loginAndReg/login.php");
