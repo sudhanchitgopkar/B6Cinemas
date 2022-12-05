@@ -2,6 +2,8 @@
 // connect to database
 
 require_once('../../controller/database.php');
+$conn = DBConnect::makeConnector();
+$conn->connect();
 
     $date = filter_input(INPUT_POST, 'date');
     $time = filter_input(INPUT_POST, 'time');

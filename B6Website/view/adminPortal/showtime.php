@@ -3,6 +3,8 @@
 
     // connect to database
     require_once('../../controller/database.php');
+    $conn = DBConnect::makeConnector();
+    $conn->connect();
 
     $id = $_GET['id'];
     $query = 'SELECT * FROM movie WHERE movie_id=:_movie_id';

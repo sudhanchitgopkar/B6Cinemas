@@ -3,6 +3,8 @@
 
     // connect to database
     require_once('./controller/database.php');
+    $conn = DBConnect::makeConnector();
+    $conn->connect();
 
     $i = $_SESSION['loggedin'];
  
@@ -73,7 +75,7 @@
     <h1>Now Playing</h1><br>
 
     <div class="hero-container first" >
-        <?php
+        <?php   
             $query = 'SELECT * FROM movie';
 
             $statement = $db->prepare($query);
@@ -104,6 +106,8 @@
            
             
     <?php
+            $conn = DBConnect::makeConnector();
+            $conn->connect();
             $query = 'SELECT * FROM movie';
 
             $statement = $db->prepare($query);

@@ -16,7 +16,7 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="orderConfirmation.css">
     <title>B6 Cinemas</title>
 </head>
 
@@ -39,23 +39,15 @@
         </nav>  
     </div>
 
-    <div class="card">
-        <img src="../images/popcornIcon.png" class = "icon"></img>
-        <h3 class = "loginText">Sign in to B6</h3>
-         <form class="loginForm" id="sign-in" action="../../model/loginAndReg/loginUser.php" method="post">
-            <label for="user_id">👤</label> 
-            <input class = "formField" name="login_user_id" id="login_user_id" type="text" placeholder="Username"></input>
-            <br>
-            <label for="password">🔐</label>
-            <input class = "formField" name = "login_password" id="login_password" type="password" placeholder="Password"></input>
-            <br>
-            <button class = "formField" id = "btn" href = "loginConfirmation.html">login</button>
-            <p class = "auxtext">New to B6? <a href="register.php"><b>Create an account.</b></a>
-            <br>Forgot password? <a href="pwdReset.html"> <b>Reset it here.</a></b><br>
-                <input type="checkbox" id="remember" name="remember" value="true">
-                <label for="promotions">Remember Me</label><br>
-            </p>    
-        </form>
+    <div class = "confMsg">
+        <h1> You're all set! </h1>
+        <?php
+            $user = "Sudhan";
+            $confNum = 100;
+            echo "<p> Thanks for your order, " . $user . ".</p>";
+            echo "<p>Your confirmation number is " . $confNum . ", and we've sent you an email confirmation.</p>";
+        ?>
+        <button class = "formField" id = "btn" href = "../../index.php">Keep Browsing</button>
     </div>
    
   </body>

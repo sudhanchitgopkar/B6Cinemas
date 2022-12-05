@@ -4,6 +4,8 @@
 
     // connect to database
     require_once('../../controller/database.php');
+    $conn = DBConnect::makeConnector();
+    $conn->connect();
 
     if (!(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)) 
     {

@@ -1,6 +1,8 @@
 <?php
 require_once('../../controller/database.php');
 require('../../../email.php');
+$conn = DBConnect::makeConnector();
+$conn->connect();
 
     // The beginning of the session
     session_start();

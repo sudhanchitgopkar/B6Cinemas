@@ -1,6 +1,8 @@
 <?php
 // connect to database
 require_once('../../controller/database.php');
+$conn = DBConnect::makeConnector();
+$conn->connect();
 
 try {
     $showID = $_GET["id"];

@@ -1,6 +1,8 @@
 <?php
 // connect to database
 require_once('../../controller/database.php');
+$conn = DBConnect::makeConnector();
+$conn->connect();
 
 // Setting variables for the contents of the form
 $title = filter_input(INPUT_POST, 'title');

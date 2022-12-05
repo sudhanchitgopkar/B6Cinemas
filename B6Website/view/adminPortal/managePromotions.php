@@ -59,6 +59,8 @@
           </thead>
           <?php
               require_once('../../controller/database.php');
+              $conn = DBConnect::makeConnector();
+              $conn->connect();
               $query = 'SELECT * FROM promotion';
               $statement = $db->prepare($query);
               $statement->execute();

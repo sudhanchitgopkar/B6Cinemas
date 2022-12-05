@@ -2,6 +2,8 @@
     // connect to database
     require_once('../../controller/database.php');
     require('../../../email.php');
+    $conn = DBConnect::makeConnector();
+    $conn->connect();
     
     $login_email = filter_input(INPUT_POST, 'login_email');
 
