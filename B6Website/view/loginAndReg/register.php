@@ -1,5 +1,7 @@
 <?php  
    require_once('../../controller/database.php');
+   $conn = DBConnect::makeConnector();
+    $conn->connect();
 ?>
 <!DOCTYPE html>
 <html lang="en">

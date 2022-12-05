@@ -4,6 +4,8 @@
 
     // connect to database
     require_once('../database.php');
+    $conn = DBConnect::makeConnector();
+    $conn->connect();
 
     $login_user = filter_input(INPUT_POST, 'login_user_id');
     $login_pass = filter_input(INPUT_POST, 'login_password');
