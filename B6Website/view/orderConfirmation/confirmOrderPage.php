@@ -12,6 +12,22 @@
         header("Location: ../loginAndReg/login.php");
     }
 
+    $showID = $_SESSION['showID'];
+    $adult = $_SESSION['adult'];
+    $child = $_SESSION['child'];
+    $senior = $_SESSION['senior'];
+
+    $adultPrice = 8;
+    $seniorPrice = 7;
+    $childPrice = 5;
+
+    $query = 'SELECT show_.show_id, movie.title FROM show_ INNER JOIN movie ON show_.movie_id = movie.movie_id WHERE show_id = :_show_id';
+    $queryStatement = $db->prepare($query);
+    $queryStatement->bindValue(':_show_id', $showID);
+            
+    $queryStatement->execute();
+    $movie = $queryStatement->fetch();
+
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +59,7 @@
     <div>
         <div>
             <h4 class="reminder-text">
+                
                 Please take a moment to review your order.
             </h4>
             <table class="order-table">
@@ -57,64 +74,42 @@
                         <th>
                             Amount
                         </th>
-                        <th> </th>
                     </tr>
                     <tr>
                         <td>
-                            Blade Runner 2049 (Adult)
+                            <?php echo $movie[1] ?> (Adult)
                         </td>
                         <td>
-                            2
+                            <?php echo $adult ?>
                         </td>
                         <td>
-                            $19.98
-                        </td>
-                        <td>
-                            <img class="x-btn" src="../images/x.png"></img>
+                            $<?php echo $adult*$adultPrice?>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Blade Runner 2049 (Child)
+                            <?php echo $movie[1] ?> (Child)
                         </td>
                         <td>
-                            1
+                            <?php echo $child ?>
                         </td>
                         <td>
-                            $5.99
-                        </td>
-                        <td>
-                            <img class="x-btn" src="../images/x.png"></img>
+                            $<?php echo $child*$childPrice?>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Justice League (Adult)
+                            <?php echo $movie[1] ?> (Senior) 
                         </td>
                         <td>
-                            1
+                            <?php echo $senior ?>
                         </td>
                         <td>
-                            $9.99
-                        </td>
-                        <td>
-                            <img class="x-btn" src="../images/x.png"></img>
+                            $<?php echo $senior*$seniorPrice?>
                         </td>
                     </tr>
                 </tbody>
                 <tfoot class="order-table-foot">
-                    <tr>
-                        <td>
-                            Promotions Applied
-                        </td>
-                        <td>
-                        </td>
-                        <td>
-                            -10%
-                        </td>
-                        <td>
-                        </td>
-                    </tr>
                     <tr>
                         <td>
                             Order Total
@@ -122,16 +117,17 @@
                         <td>
                         </td>
                         <td>
-                            $32.36
-                        </td>
-                        <td>
+                            $<?php 
+                                $_SESSION['orderTotal'] = $adult*$adultPrice + $child*$childPrice + $senior*$seniorPrice;
+                                echo $adult*$adultPrice + $child*$childPrice + $senior*$seniorPrice;
+                            ?>
                         </td>
                     </tr>
                 </tfoot>
             </table>
         </div>
         <button class="nav-confirm-btn" onclick="location.href='./confirmPayment.html'">Confirm and Continue</button>
-        <button class="nav-confirm-btn" onclick="location.href='../index.php'">Cancel</button>
+        <button class="nav-confirm-btn" onclick="location.href='../../index.php'">Cancel</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
