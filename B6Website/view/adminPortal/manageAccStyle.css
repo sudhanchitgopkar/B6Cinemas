@@ -1,5 +1,5 @@
 body {
-    background-color: #30415D;
+    background-color: #612c2c;
     color: black;
 }
 
@@ -15,11 +15,13 @@ body {
   
 .left {
     left: 0;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.419);
 }
   
 .right {
     right: 0;
+    background-image: url(../images/moviebg.jpg);
+    background-size:cover;
     background-color: #30415D;
 }
 
