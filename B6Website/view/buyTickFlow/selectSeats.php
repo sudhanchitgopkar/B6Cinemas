@@ -12,6 +12,11 @@
     $senior = filter_input(INPUT_POST, 'senior');
 
     $numTickets = $adult + $child + $senior;
+
+    $_SESSION['showID'] = $showID;
+    $_SESSION['adult'] = $adult;
+    $_SESSION['child'] = $child;
+    $_SESSION['senior'] = $senior;
 ?>
 
 <!DOCTYPE html>
@@ -58,8 +63,7 @@
     </div> 
       
     <!--Main section-->
-
-    <h1>Select Seats</h1>
+    <h1>Select <?php echo $numTickets ?> Seats</h1>
     <div class="theater-seats">
         <form name="seatForm" class="seatForm" action="../orderConfirmation/confirmOrderPage.php" method="POST">
             <ol class="theater">
@@ -67,23 +71,23 @@
                     <li class="row row1">
                         <ol class="seats">
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="11" />
+                                <input type="checkbox" name="seat" id="1" />
                                 <label for="A1"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="12" />
+                                <input type="checkbox" name="seat" id="2" />
                                 <label for="A2"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="13" />
+                                <input type="checkbox" name="seat" id="3" />
                                 <label for="A3"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="14" />
+                                <input type="checkbox" name="seat" id="4" />
                                 <label for="A4"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="15" />
+                                <input type="checkbox" name="seat" id="5" />
                                 <label for="A5"></label>
                             </li>
                         </ol>
@@ -91,23 +95,23 @@
                     <li class="row row2">
                         <ol class="seats">
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="21" />
+                                <input type="checkbox" name="seat" id="6" />
                                 <label for="B1"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="22" />
+                                <input type="checkbox" name="seat" id="7" />
                                 <label for="B2"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="23" />
+                                <input type="checkbox" name="seat" id="8" />
                                 <label for="B3"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="24" />
+                                <input type="checkbox" name="seat" id="9" />
                                 <label for="B4"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="25" />
+                                <input type="checkbox" name="seat" id="10" />
                                 <label for="B5"></label>
                             </li>
                         </ol>
@@ -115,23 +119,23 @@
                     <li class="row row3">
                         <ol class="seats">
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="31" />
+                                <input type="checkbox" name="seat" id="11" />
                                 <label for="C1"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="32" />
+                                <input type="checkbox" name="seat" id="12" />
                                 <label for="C2"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="33" />
+                                <input type="checkbox" name="seat" id="13" />
                                 <label for="C3"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="34" />
+                                <input type="checkbox" name="seat" id="14" />
                                 <label for="C4"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="35" />
+                                <input type="checkbox" name="seat" id="15" />
                                 <label for="C5"></label>
                             </li>
                         </ol>
@@ -139,23 +143,23 @@
                     <li class="row row4">
                         <ol class="seats">
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="41" />
+                                <input type="checkbox" name="seat" id="16" />
                                 <label for="D1"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="42" />
+                                <input type="checkbox" name="seat" id="17" />
                                 <label for="D2"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="43" />
+                                <input type="checkbox" name="seat" id="18" />
                                 <label for="D3"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="44" />
+                                <input type="checkbox" name="seat" id="19" />
                                 <label for="D4"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="45" />
+                                <input type="checkbox" name="seat" id="20" />
                                 <label for="D5"></label>
                             </li>
                         </ol>
@@ -163,23 +167,23 @@
                     <li class="row row5">
                         <ol class="seats">
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="51" />
+                                <input type="checkbox" name="seat" id="21" />
                                 <label for="E1"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="52" />
+                                <input type="checkbox" name="seat" id="22" />
                                 <label for="E2"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="53" />
+                                <input type="checkbox" name="seat" id="23" />
                                 <label for="E3"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="54" />
+                                <input type="checkbox" name="seat" id="24" />
                                 <label for="E4"></label>
                             </li>
                             <li class="seat">
-                                <input type="checkbox" name="seat" id="55" />
+                                <input type="checkbox" name="seat" id="25" />
                                 <label for="E5"></label>
                             </li>
                         </ol>
@@ -193,7 +197,7 @@
     <p class="screen">screen</p>
 
     <div class="select-container">
-        <button type="submit" class="checkout-button" onclick="location.href='../orderConfirmation/confirmOrderPage.php'">Checkout</button>
+        <button type="submit" id="checkout-button" class="checkout-button" onclick="location.href='../orderConfirmation/confirmOrderPage.php'">Checkout</button>
     </div>  
     
 </body>
@@ -211,12 +215,22 @@
         document.onclick = function() {
             var checkBoxGroup = document.forms['seatForm']['seat'];
             var limit = <?php echo $numTickets ?>;
-            
+            console.log("limit:" + limit);
             for (var i = 0; i < checkBoxGroup.length; i++) {
                 var checkedcount = 0;
-                for (var i = 0; i < checkBoxGroup.length; i++) {
-                    checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
-                }   
-            }
+                    for (var i = 0; i < checkBoxGroup.length; i++) {
+                        checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
+                    } 
+                    console.log(checkedcount);
+                    if (checkedcount == limit) {
+                        document.getElementById("checkout-button").style.display="inline";
+                    } else {
+                        document.getElementById("checkout-button").style.display="none";
+                    }
+            }  
+            
+                
+            
+            
         }
 </script>

@@ -1,5 +1,6 @@
 .showtime-buttons {
     text-align: center;
+    height: auto;
 }
 
 .time-buttons {
@@ -89,6 +90,9 @@ input[type="checkbox"]:not(:checked) {
 
 input[type="checkbox"]:checked {
     content: url('../images/selectedChair.png');
+    appearance: none;
+    display: block;
+    width: 4vw;
 }
   
 .checkout-button {
@@ -98,6 +102,17 @@ input[type="checkbox"]:checked {
     color: white;
     font-size: 20px;
     padding: 5px;    
+    display:none;
+}
+
+.checkout-button1 {
+    background-color:#8EAEBD;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 5px; 
+    margin: 15px;
 }
 
 .screen {

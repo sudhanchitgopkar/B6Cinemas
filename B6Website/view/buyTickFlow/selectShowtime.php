@@ -7,6 +7,7 @@
     $conn->connect();
 
     $i = $_SESSION['loggedin'];
+
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +71,7 @@
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 if ($row["movie_id"] == $movieID) {
                     echo " <input type='radio' name='showId' value='" . $row["show_id"] . "'>" . $row["date"] . ", " .
-                    $row["time"] % 12 . "PM" . "</button>";
+                    $row["time"] % 12 . "PM" . "</button><br>";
                 } //if
             } //while
             echo "</div>";
@@ -86,10 +87,11 @@
                 <input type="text" size="3" name="child" id="child"><br>
                 <label for="senior">Senior Ticket(s):</label>
                 <input type="text" size="3" name="senior" id="senior"><br>
+                <button type="submit" class="checkout-button1" onclick="location.href='selectSeats.php'">Select Seats</button>
             </div>
         </div>
         
-        <button type="submit" class="checkout-button" onclick="location.href='selectSeats.php'">Select Seats</button>
+       
     </form>
 
 
