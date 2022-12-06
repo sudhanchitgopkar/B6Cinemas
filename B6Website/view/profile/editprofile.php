@@ -121,7 +121,6 @@
                 $statement->execute();
 
                 while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    if($row['booking_id'] < 7) {
                         echo "
                         <h3>Booking Number: " . $row['booking_id'] . "</h3><br>
                         <div class='innerCard'>
@@ -129,7 +128,6 @@
                             <p><b>Date:</b> " . $row['date'] . "</p>
                         </div>
                         <br>";
-                    }
                 }
                 
                 ?>

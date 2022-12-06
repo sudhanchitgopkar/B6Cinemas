@@ -39,7 +39,7 @@ try {
     $statement->closeCursor();
 
     // Redirecting to the sign_in page
-    header("Location: ../../view/adminPortal/manageMovies.html");
+    header("Location: ../../view/adminPortal/manageMovies.php");
 
 } catch(PDOException $e) {
     echo 'Error!';

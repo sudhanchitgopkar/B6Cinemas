@@ -85,7 +85,9 @@
               <input type="text" name="trailerVid" id="trailerVid" required><br>
               <label class="desc-label" for="synopsis">Synopsis:</label>
               <textarea id="synopsis" name="synopsis" rows="4" cols="50" required></textarea><br>
-              <button class = "add-button" id = "btn" href="./manageMovies.php">Add Movie</button>
+              <a href = "./adminIndex.html">
+                <button class = "add-button" >Add Movie</button>
+              </a>
           </form>
         </div>
         <br>
