@@ -1,4 +1,5 @@
 <?php
+    require_once('../../../email.php');
     require_once('../../controller/database.php');
     $conn = DBConnect::makeConnector();
     $conn->connect();
@@ -61,8 +62,13 @@
            
             echo "<p> Thanks for your order, " . $user . ".</p>";
             echo "<p>Your confirmation number is " . $confNum . ", and we've sent you an email confirmation.</p>";
+            
+            $emailBody = "Thank you for your recent order, " . $user . "<br> Your order confirmation number is " . $confNum . ".<br> Have a great movie!";
+            sendEmail($email,"Your B6 Order Confirmation",$emailBody);
         ?>
-        <button class = "formField" id = "btn" href = "../../index.php">Keep Browsing</button>
+        <a href = "../../index.php">
+            <button class = "formField" id = "btn" action = "../../index.php">Keep Browsing</button>
+        </a>
     </div>
    
   </body>
