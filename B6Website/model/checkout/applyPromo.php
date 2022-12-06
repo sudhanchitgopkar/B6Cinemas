@@ -16,7 +16,7 @@
         $discount = 0;
         if ($info = $statement->fetch(PDO::FETCH_ASSOC)) {
             $discount = $info['promotion_amount'];
-            $_SESSION["promoApplied"]=true;
+            $_SESSION["promoAppliedID"]=$info['promotion_id'];
         }
 
         header("Location: ../../view/orderConfirmation/confirmOrderPage.php?id=".$discount);
