@@ -52,11 +52,15 @@ try {
     $statementB->bindValue(":_show_id", $_SESSION['showID']);
     $statementB->bindValue(":_total", $_SESSION['orderTotal']);
     $statementB->bindValue(":_payment_id", $payment_card);
-    if($_SESSION['promoApplied'] !== null) {
-        $statementB->bindValue(":_promo_id", $_SESSION['promoApplied']);
+    if($_SESSION['promoAppliedID'] !== null) {
+        $statementB->bindValue(":_promo_id", $_SESSION['promoAppliedID']);
     } else {
         $statementB->bindValue(":_promo_id", -1);
     }
+
+    unset($_SESSION['showID']);
+    unset($_SESSION['orderTotal']);
+    unset($_SESSION['promoAppliedID']);
 
     $statementB->execute();
 
