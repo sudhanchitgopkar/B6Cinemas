@@ -116,7 +116,7 @@
             while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 if($row['movie_id'] >= 7) {
                     echo "
-                    <div class='main-container'>
+                    <div class='main-container' id='box'>
                     <movie-card 
                         rating=".$row["mpaa_rating"].
                         " movie='".$row["title"] . 
