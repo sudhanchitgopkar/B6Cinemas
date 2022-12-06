@@ -92,7 +92,7 @@
     <div class="newShow">
         <form action="../../model/adminStuff/scheduleMovie.php?id=<?php echo $_GET["id"];?>" method="post">
             <label for="date">Show Date: </label>
-            <input type="date" name="date" id="date">
+            <input type="date" name="date" id="date" required>
             <br>
 
             <label for="time">Show Time: </label>
