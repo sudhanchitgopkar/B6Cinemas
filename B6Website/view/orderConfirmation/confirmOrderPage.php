@@ -7,10 +7,7 @@
     $conn = DBConnect::makeConnector();
     $conn->connect();
 
-    if (!(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)) 
-    {
-        header("Location: ../loginAndReg/login.php");
-    }
+   
 
     $showID = $_SESSION['showID'];
     $adult = $_SESSION['adult'];
