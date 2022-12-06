@@ -101,6 +101,39 @@
 
         <div class="orders flexMe">
             <h1>Past Orders</h1>
+            <div class="innerPaymentInfo">
+                <?php   
+                $query2 = 'SELECT 
+                    booking.booking_id, 
+                    booking.total, 
+                    movie.title, 
+                    show_.date 
+                FROM booking 
+                INNER JOIN show_ 
+                    ON booking.show_id = show_.show_id 
+                INNER JOIN movie 
+                    ON show_.movie_id = movie.movie_id
+                WHERE booking.customer_id = :_customer_id';
+          
+                $statement = $db->prepare($query2);
+                $statement->bindValue(':_customer_id', $_SESSION['userID']);
+                
+                $statement->execute();
+
+                while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                    if($row['booking_id'] < 7) {
+                        echo "
+                        <h3>Booking Number: " . $row['booking_id'] . "</h3><br>
+                        <div class='innerCard'>
+                            <p><b>Movie Title: </b> " . $row['title'] . " <b>Order Total:</b> $" . $row['total'] . "</p><br>
+                            <p><b>Date:</b> " . $row['date'] . "</p>
+                        </div>
+                        <br>";
+                    }
+                }
+                
+                ?>
+            </div>
         </div>
 
         <div class="paymentInfo flexMe">
