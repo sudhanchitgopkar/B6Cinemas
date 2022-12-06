@@ -17,7 +17,7 @@ template.innerHTML = `
 	left: 20px;
 }
 
-.is-hidden { visibility: hidden; }
+.is-hidden { display: none; }
 
 .poster {
 	width: 100%;
@@ -173,7 +173,8 @@ function myFunction() {
 
 function liveSearch() {
     // Locate the card elements
-    let cards = document.querySelectorAll('movie-card')
+    let cards = document.querySelectorAll("movie-card");
+	let outerCards = document.querySelectorAll("#box");
     // Locate the search input
     let search_query = document.getElementById("searchbox").value;
     // Loop through the cards
@@ -184,10 +185,10 @@ function liveSearch() {
         if(cards[i].getAttribute('movie').toLowerCase().includes(search_query.toLowerCase())
 		|| cards[i].getAttribute('genre').toLowerCase().includes(search_query.toLowerCase())) {
             // ...remove the `.is-hidden` class.
-            cards[i].classList.remove("is-hidden");
+            outerCards[i].classList.remove("is-hidden");
         } else {
         	// Otherwise, add the class.
-        	cards[i].classList.add("is-hidden");
+        	outerCards[i].classList.add("is-hidden");
         }
     }
             
