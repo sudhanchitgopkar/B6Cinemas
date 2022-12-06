@@ -126,7 +126,7 @@
                 </tfoot>
             </table>
         </div>
-        <button class="nav-confirm-btn" onclick="location.href='./confirmPayment.html'">Confirm and Continue</button>
+        <button class="nav-confirm-btn" onclick="location.href='./confirmPayment.php'">Confirm and Continue</button>
         <button class="nav-confirm-btn" onclick="location.href='../../index.php'">Cancel</button>
     </div>
 
