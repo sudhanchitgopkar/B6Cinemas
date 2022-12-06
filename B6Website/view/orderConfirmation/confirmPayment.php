@@ -92,7 +92,7 @@
 
                 <br>
                 <input class="nav-confirm-btn" type="submit" value="Confirm and Continue">
-                <button class="nav-confirm-btn" onclick="location.href='../../index.php'">Cancel</button>
+                <input class="nav-confirm-btn" value="Cancel" onclick="location.href='../../index.php'">
             </form>
         </div>
         <br><br>

@@ -13,7 +13,7 @@
 .nav-confirm-btn {       
     display: block;
     padding: .5rem 1rem;
-    color: darkslategray;
+    color: white;
     text-align: center;
     margin-top: 15px;
     margin-left: auto;
@@ -22,4 +22,17 @@
 
 .nav-confirm-btn:hover {
     color: gray;
+}
+
+input {
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    color: white;
+    background-color: rgba(240, 248, 255, 0);
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
