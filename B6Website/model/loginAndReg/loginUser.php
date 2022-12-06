@@ -38,7 +38,7 @@
 
         } else {
             // Notify User their username/password was incorrect
-            header("Location: ../../view/loginAndReg/login.php");
+            header("Location: ../../view/loginAndReg/login.php?showMessage=true");
         }
 
     } catch(PDOException $e) {
