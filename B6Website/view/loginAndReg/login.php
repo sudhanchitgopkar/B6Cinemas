@@ -57,6 +57,13 @@
             </p>    
         </form>
     </div>
-   
+
+    <script type="text/javascript">
+      window.onload = function() {
+        if (<?php echo $_GET['showMessage']; ?>) {
+            alert("Your Username or Password is incorrect!");
+        }
+      }
+   </script>
   </body>
 </html>
