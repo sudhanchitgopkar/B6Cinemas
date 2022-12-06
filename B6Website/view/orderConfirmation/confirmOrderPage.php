@@ -7,7 +7,10 @@
     $conn = DBConnect::makeConnector();
     $conn->connect();
 
-   
+    if (!(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)) 
+    {
+        header("Location: ../loginAndReg/login.php");
+    }
 
     $showID = $_SESSION['showID'];
     $adult = $_SESSION['adult'];
@@ -120,8 +123,33 @@
                             ?>
                         </td>
                     </tr>
+                    <form id = "promo" action="../../model/checkout/applyPromo.php" method="post">
+                    <tr>
+                        <td>
+                            <p>Promotions:</p>
+                        </td>
+                        <td>
+                        <input type = "text" placeholder = "Promo Code" class = "promo-code" name = "entered_code">
+                        </td>
+                        <td>
+                        <input type = "submit" value = "submit" class="nav-confirm-btn">
+                        </td>
+                    </tr>
+                    <?php
+                        if(isset($_GET['id']) && $_GET['id'] != 0)
+                        {
+                            $promoAmt = $_GET['id'];
+                            echo "<tr> <td> New Order total </td> <td> </td> <td>";
+                            $_SESSION['orderTotal'] *= ((100-$promo)/100);
+                            echo "$".((100-$promoAmt)/100) * ($adult*$adultPrice + $child*$childPrice + $senior*$seniorPrice) . "</td> </tr>";
+                        }
+                    ?>
+                    </form>
                 </tfoot>
             </table>
+
+            
+            
         </div>
         <button class="nav-confirm-btn" onclick="location.href='./confirmPayment.php'">Confirm and Continue</button>
         <button class="nav-confirm-btn" onclick="location.href='../../index.php'">Cancel</button>

@@ -58,7 +58,8 @@
     height: 16px;
 }
 
-.nav-confirm-btn {       
+.nav-confirm-btn {   
+    border-radius: 15px;    
     display: block;
     padding: .5rem 1rem;
     color: darkslategray;
@@ -70,4 +71,17 @@
 
 .nav-confirm-btn:hover {
     color: gray;
+}
+
+.promo-code {
+    margin-top: 0%;
+    
+    color: white;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 2px solid white;
+}
+
+::placeholder {
+    color: white;
 }
