@@ -76,13 +76,16 @@
 
     <div class="hero-container first" >
         <?php   
-            $query = 'SELECT * FROM movie';
+            $query = 'SELECT DISTINCT movie.movie_id, movie.title, movie.trailer_picture, movie.mpaa_rating, movie.genre, show_.date 
+            FROM movie INNER JOIN show_ ON movie.movie_id = show_.movie_id';
 
             $statement = $db->prepare($query);
             $statement->execute();
-           
+
+            date_default_timezone_set('America/New_York');
+
             while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                if($row['movie_id'] < 7) {
+                if ($row['date'] >= date('Y-m-d', time())) {
                     echo "
                     <div class='main-container' id='box'>
                     <movie-card 
@@ -92,29 +95,26 @@
                         " genre=".$row["genre"].
                         " poster=".$row["trailer_picture"].">
                     </movie-card>  
-                </div>";
+                    </div>";   
                 }
-                
             }
         ?>
             
     </div> 
 
-
+    <br><br>
     <h1 id="soon">Coming Soon</h1>
     <div class="hero-container second" >
            
             
     <?php
-            $conn = DBConnect::makeConnector();
-            $conn->connect();
-            $query = 'SELECT * FROM movie';
+            $query = 'SELECT * FROM movie WHERE movie_id NOT IN (SELECT DISTINCT movie.movie_id 
+            FROM movie INNER JOIN show_ ON movie.movie_id = show_.movie_id)';
 
             $statement = $db->prepare($query);
             $statement->execute();
            
             while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                if($row['movie_id'] >= 7) {
                     echo "
                     <div class='main-container' id='box'>
                     <movie-card 
@@ -125,8 +125,6 @@
                         " poster=".$row["trailer_picture"].">
                     </movie-card>  
                 </div>";
-                }
-                
             }
         ?>
 
