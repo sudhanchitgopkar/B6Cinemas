@@ -66,6 +66,7 @@
               $statement->execute();
 
              while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                   if($row['promotion_id'] == -1) continue;
                    echo "<tr>" . 
                    " <td>" . $row['promotion_id'] . " </td>" . 
                    " <td>" . $row['promotion_key'] . " </td>" . 

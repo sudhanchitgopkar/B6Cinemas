@@ -28,3 +28,9 @@ p {
     text-align: center;
     line-height: 10px;
 }
+
+#btn {
+    display: block; 
+    margin: auto;
+    padding: 10px;
+}

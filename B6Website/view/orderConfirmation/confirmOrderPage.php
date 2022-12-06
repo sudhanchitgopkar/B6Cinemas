@@ -140,7 +140,7 @@
                         {
                             $promoAmt = $_GET['id'];
                             echo "<tr> <td> New Order total </td> <td> </td> <td>";
-                            $_SESSION['orderTotal'] *= ((100-$promo)/100);
+                            $_SESSION['orderTotal'] *= ((100-$promoAmt)/100);
                             echo "$".((100-$promoAmt)/100) * ($adult*$adultPrice + $child*$childPrice + $senior*$seniorPrice) . "</td> </tr>";
                         }
                     ?>

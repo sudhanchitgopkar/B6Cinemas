@@ -73,9 +73,9 @@
                     </h4>
 
                 <br><br>
-                <label for="savedcards">Saved Cards:</label>
-                    <select name="savedcards" id="savedcards">
-                        <option value="none">Use Temp Card</option>
+                <label for="savedCards">Saved Cards:</label>
+                    <select name="savedCards" id="savedCards" form="addTempCard">
+                        <option value="-1">Use Temp Card</option>
                         <?php
                             $cQuery = "SELECT * FROM payment_card WHERE owner_id=:_owner_id";
                             $statement = $db->prepare($cQuery);
@@ -84,7 +84,7 @@
                             $statement->execute();
 
                             while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                                echo "<option>****" . $row['card_last_four'] . "</option>";
+                                echo "<option value=" . $row['card_id'] . ">****" . $row['card_last_four'] . "</option>";
                             }
                         ?>
                     </select>
