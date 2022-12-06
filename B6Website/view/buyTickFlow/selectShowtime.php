@@ -74,8 +74,8 @@
             echo "<div class='showtime-buttons'>";
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 if ($row["movie_id"] == $movieID) {
-                    echo " <input type='radio' name='showId' value='" . $row["show_id"] . "'>" . $row["date"] . ", " .
-                    $row["time"] % 12 . "PM" . "</button><br>";
+                    echo " <input type='radio' name='showId' value='" . $row["show_id"] . "' required >" . $row["date"] . ", " .
+                    $row["time"] % 12 . "PM" . "<br>";
                 } //if
             } //while
             echo "</div>";
@@ -86,12 +86,12 @@
 
             <div class="select-container">
                 <label for="adult">Adult Ticket(s):</label>
-                <input type="text" size="3" name="adult" id="adult"><br>
+                <input type="text" size="3" name="adult" id="adult" required><br>
                 <label for="child">Child Ticket(s):</label>
-                <input type="text" size="3" name="child" id="child"><br>
+                <input type="text" size="3" name="child" id="child" required><br>
                 <label for="senior">Senior Ticket(s):</label>
-                <input type="text" size="3" name="senior" id="senior"><br>
-                <button type="submit" class="checkout-button1" onclick="location.href='selectSeats.php'">Select Seats</button>
+                <input type="text" size="3" name="senior" id="senior" required><br>
+                <button type="submit" class="checkout-button1" href='selectSeats.php'">Select Seats</button>
             </div>
         </div>
         

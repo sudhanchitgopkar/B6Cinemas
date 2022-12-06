@@ -1,0 +1,192 @@
+Date : 2022-12-05 22:48:54
+Directory : c:\xampp\htdocs\B6Cinemas
+Total : 140 files,  9942 codes, 3677 comments, 1609 blanks, all 15228 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| PHP        |        101 |      7,707 |      3,659 |      1,257 |     12,623 |
+| CSS        |         14 |        968 |          0 |        179 |      1,147 |
+| HTML       |         10 |        567 |          5 |         49 |        621 |
+| JSON       |          4 |        265 |          0 |          4 |        269 |
+| JavaScript |          3 |        219 |         13 |         36 |        268 |
+| Markdown   |          3 |        186 |          0 |         84 |        270 |
+| XML        |          5 |         30 |          0 |          0 |         30 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                              | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                 |        140 |      9,942 |      3,677 |      1,609 |     15,228 |
+| .idea                                                                             |          4 |         29 |          0 |          0 |         29 |
+| B6Website                                                                         |         58 |      3,861 |         64 |        595 |      4,520 |
+| B6Website\controller                                                              |          1 |         24 |          0 |          4 |         28 |
+| B6Website\model                                                                   |         14 |        458 |         34 |        111 |        603 |
+| B6Website\model\adminStuff                                                        |          6 |        176 |         16 |         37 |        229 |
+| B6Website\model\checkout                                                          |          1 |          3 |          1 |          4 |          8 |
+| B6Website\model\loginAndReg                                                       |          4 |        175 |         12 |         40 |        227 |
+| B6Website\model\orderConfirmation                                                 |          1 |         32 |          1 |          9 |         42 |
+| B6Website\model\profile                                                           |          1 |         48 |          4 |         17 |         69 |
+| B6Website\movie                                                                   |          2 |        126 |          1 |         21 |        148 |
+| B6Website\view                                                                    |         38 |      2,922 |         15 |        393 |      3,330 |
+| B6Website\view\adminPortal                                                        |         16 |      1,192 |          4 |        141 |      1,337 |
+| B6Website\view\buyTickFlow                                                        |          3 |        408 |          2 |         63 |        473 |
+| B6Website\view\images                                                             |          1 |          1 |          0 |          0 |          1 |
+| B6Website\view\loginAndReg                                                        |          8 |        521 |          5 |         76 |        602 |
+| B6Website\view\orderConfirmation                                                  |          6 |        377 |          2 |         55 |        434 |
+| B6Website\view\profile                                                            |          2 |        313 |          2 |         31 |        346 |
+| composer                                                                          |         10 |        660 |        380 |        142 |      1,182 |
+| phpmailer                                                                         |         62 |      5,233 |      3,198 |        853 |      9,284 |
+| phpmailer\phpmailer                                                               |         62 |      5,233 |      3,198 |        853 |      9,284 |
+| phpmailer\phpmailer\language                                                      |         52 |      1,075 |        307 |        156 |      1,538 |
+| phpmailer\phpmailer\src                                                           |          6 |      3,797 |      2,844 |        596 |      7,237 |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                          | language   | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\xampp\htdocs\B6Cinemas\.idea\B6Cinemas.iml                                     | XML        |          9 |          0 |          0 |          9 |
+| c:\xampp\htdocs\B6Cinemas\.idea\misc.xml                                          | XML        |          6 |          0 |          0 |          6 |
+| c:\xampp\htdocs\B6Cinemas\.idea\modules.xml                                       | XML        |          8 |          0 |          0 |          8 |
+| c:\xampp\htdocs\B6Cinemas\.idea\vcs.xml                                           | XML        |          6 |          0 |          0 |          6 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\controller\database.php                       | PHP        |         24 |          0 |          4 |         28 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\index.php                                     | PHP        |        124 |          1 |         31 |        156 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\adminStuff\addPromo.php                 | PHP        |         27 |          4 |          6 |         37 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\adminStuff\deletePromo.php              | PHP        |         17 |          3 |          5 |         25 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\adminStuff\deleteShowtime.php           | PHP        |         23 |          3 |          6 |         32 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\adminStuff\newMovie.php                 | PHP        |         38 |          4 |          7 |         49 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\adminStuff\scheduleMovie.php            | PHP        |         41 |          1 |          6 |         48 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\adminStuff\sendPromo.php                | PHP        |         30 |          1 |          7 |         38 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\checkout\checkout.php                   | PHP        |          3 |          1 |          4 |          8 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\database.php                            | PHP        |         24 |          0 |          4 |         28 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\loginAndReg\forgotPass.php              | PHP        |         37 |          1 |          8 |         46 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\loginAndReg\loginUser.php               | PHP        |         33 |          4 |         12 |         49 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\loginAndReg\registerCollapsible.js      | JavaScript |         12 |          0 |          1 |         13 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\loginAndReg\registerUser.php            | PHP        |         93 |          7 |         19 |        119 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\orderConfirmation\finalizeCheckout.php  | PHP        |         32 |          1 |          9 |         42 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\model\profile\editUser.php                    | PHP        |         48 |          4 |         17 |         69 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\movie-card.js                                 | JavaScript |        188 |          6 |         32 |        226 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\movie\movie.css                               | CSS        |         49 |          0 |          9 |         58 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\movie\movie.php                               | PHP        |         77 |          1 |         12 |         90 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\search.js                                     | JavaScript |         19 |          7 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\addAdmin.html                | HTML       |         58 |          0 |          4 |         62 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\addMovie.php                 | PHP        |         89 |          0 |          6 |         95 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\addPromoStyle.css            | CSS        |         77 |          0 |         12 |         89 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\addPromotion.html            | HTML       |         64 |          2 |          6 |         72 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\adminIndex.html              | HTML       |         45 |          0 |          5 |         50 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\editCustomer.html            | HTML       |         60 |          0 |          4 |         64 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\editMovie.html               | HTML       |         79 |          0 |          4 |         83 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\manageAccStyle.css           | CSS        |         98 |          0 |         19 |        117 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\manageAccounts.html          | HTML       |        101 |          0 |          4 |        105 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\manageMovies.html            | HTML       |         47 |          0 |          4 |         51 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\manageMovies.php             | PHP        |         75 |          1 |         15 |         91 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\manageMoviesStyle.css        | CSS        |         83 |          0 |         16 |         99 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\managePromoStyle.css         | CSS        |         91 |          0 |         15 |        106 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\managePromotions.php         | PHP        |         87 |          0 |          8 |         95 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\showtime.css                 | CSS        |         25 |          0 |          4 |         29 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\adminPortal\showtime.php                 | PHP        |        113 |          1 |         15 |        129 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\buyTickFlow\selectSeats.php              | PHP        |        213 |          1 |         22 |        236 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\buyTickFlow\selectShowtime.php           | PHP        |         92 |          1 |         23 |        116 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\buyTickFlow\showtimeStyle.css            | CSS        |        103 |          0 |         18 |        121 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\homepage.css                             | CSS        |         77 |          0 |         18 |         95 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\images\B6 Cinema.svg                     | XML        |          1 |          0 |          0 |          1 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\loginAndReg\activateUser.php             | PHP        |         40 |          1 |         11 |         52 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\loginAndReg\login.css                    | CSS        |        130 |          0 |         23 |        153 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\loginAndReg\login.php                    | PHP        |         56 |          0 |          6 |         62 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\loginAndReg\loginConfirmation.html       | HTML       |         39 |          1 |          6 |         46 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\loginAndReg\logout.php                   | PHP        |         51 |          1 |         10 |         62 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\loginAndReg\pwdReset.html                | HTML       |         46 |          1 |          6 |         53 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\loginAndReg\register.php                 | PHP        |        131 |          0 |          8 |        139 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\loginAndReg\resetEmailSent.html          | HTML       |         28 |          1 |          6 |         35 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\main.css                                 | CSS        |         33 |          0 |          9 |         42 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\orderConfirmation\confirmOrderPage.css   | CSS        |         61 |          0 |         12 |         73 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\orderConfirmation\confirmOrderPage.php   | PHP        |        118 |          1 |         15 |        134 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\orderConfirmation\confirmPayment.css     | CSS        |         34 |          0 |          4 |         38 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\orderConfirmation\confirmPayment.php     | PHP        |         89 |          1 |         15 |        105 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\orderConfirmation\orderConfirmation.css  | CSS        |         27 |          0 |          3 |         30 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\orderConfirmation\orderConfirmation.php  | PHP        |         48 |          0 |          6 |         54 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\profile\editprofile.css                  | CSS        |         80 |          0 |         17 |         97 |
+| c:\xampp\htdocs\B6Cinemas\B6Website\view\profile\editprofile.php                  | PHP        |        233 |          2 |         14 |        249 |
+| c:\xampp\htdocs\B6Cinemas\Exception.php                                           | PHP        |          9 |         28 |          4 |         41 |
+| c:\xampp\htdocs\B6Cinemas\README.md                                               | Markdown   |          0 |          0 |          1 |          1 |
+| c:\xampp\htdocs\B6Cinemas\autoload.php                                            | PHP        |         20 |          1 |          5 |         26 |
+| c:\xampp\htdocs\B6Cinemas\composer.json                                           | JSON       |          5 |          0 |          1 |          6 |
+| c:\xampp\htdocs\B6Cinemas\composer.lock                                           | JSON       |         97 |          0 |          1 |         98 |
+| c:\xampp\htdocs\B6Cinemas\composer\ClassLoader.php                                | PHP        |        276 |        240 |         57 |        573 |
+| c:\xampp\htdocs\B6Cinemas\composer\InstalledVersions.php                          | PHP        |        174 |        131 |         48 |        353 |
+| c:\xampp\htdocs\B6Cinemas\composer\autoload_classmap.php                          | PHP        |          6 |          1 |          4 |         11 |
+| c:\xampp\htdocs\B6Cinemas\composer\autoload_namespaces.php                        | PHP        |          5 |          1 |          4 |         10 |
+| c:\xampp\htdocs\B6Cinemas\composer\autoload_psr4.php                              | PHP        |          6 |          1 |          4 |         11 |
+| c:\xampp\htdocs\B6Cinemas\composer\autoload_real.php                              | PHP        |         25 |          4 |         10 |         39 |
+| c:\xampp\htdocs\B6Cinemas\composer\autoload_static.php                            | PHP        |         28 |          1 |          8 |         37 |
+| c:\xampp\htdocs\B6Cinemas\composer\installed.json                                 | JSON       |         87 |          0 |          1 |         88 |
+| c:\xampp\htdocs\B6Cinemas\composer\installed.php                                  | PHP        |         32 |          0 |          1 |         33 |
+| c:\xampp\htdocs\B6Cinemas\composer\platform_check.php                             | PHP        |         21 |          1 |          5 |         27 |
+| c:\xampp\htdocs\B6Cinemas\email.php                                               | PHP        |         28 |          6 |          7 |         41 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\README.md                           | Markdown   |        167 |          0 |         64 |        231 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\SECURITY.md                         | Markdown   |         19 |          0 |         19 |         38 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\composer.json                       | JSON       |         76 |          0 |          1 |         77 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\get_oauth_token.php                 | PHP        |         99 |         47 |         17 |        163 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-af.php      | PHP        |         20 |          4 |          3 |         27 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-ar.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-az.php      | PHP        |         19 |          6 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-ba.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-be.php      | PHP        |         19 |          6 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-bg.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-ca.php      | PHP        |         19 |          6 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-cs.php      | PHP        |         22 |          4 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-da.php      | PHP        |         26 |          7 |          3 |         36 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-de.php      | PHP        |         22 |          4 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-el.php      | PHP        |         27 |          4 |          3 |         34 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-eo.php      | PHP        |         20 |          4 |          3 |         27 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-es.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-et.php      | PHP        |         20 |          6 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-fa.php      | PHP        |         20 |          6 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-fi.php      | PHP        |         14 |         12 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-fo.php      | PHP        |         13 |         12 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-fr.php      | PHP        |         28 |          8 |          3 |         39 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-gl.php      | PHP        |         19 |          6 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-he.php      | PHP        |         19 |          6 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-hi.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-hr.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-hu.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-hy.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-id.php      | PHP        |         22 |          7 |          3 |         32 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-it.php      | PHP        |         20 |          6 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-ja.php      | PHP        |         20 |          7 |          3 |         30 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-ka.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-ko.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-lt.php      | PHP        |         19 |          6 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-lv.php      | PHP        |         19 |          6 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-mg.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-mn.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-ms.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-nb.php      | PHP        |         20 |          4 |          3 |         27 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-nl.php      | PHP        |         27 |          5 |          3 |         35 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-pl.php      | PHP        |         20 |          4 |          3 |         27 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-pt.php      | PHP        |         20 |          5 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-pt_br.php   | PHP        |         27 |          9 |          3 |         39 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-ro.php      | PHP        |         27 |          4 |          3 |         34 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-ru.php      | PHP        |         20 |          6 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-sk.php      | PHP        |         22 |          6 |          3 |         31 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-sl.php      | PHP        |         27 |          7 |          3 |         37 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-sr.php      | PHP        |         20 |          6 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-sr_latn.php | PHP        |         20 |          6 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-sv.php      | PHP        |         19 |          6 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-tl.php      | PHP        |         20 |          6 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-tr.php      | PHP        |         20 |          9 |          3 |         32 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-uk.php      | PHP        |         20 |          6 |          3 |         29 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-vi.php      | PHP        |         19 |          6 |          3 |         28 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-zh.php      | PHP        |         20 |          7 |          3 |         30 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\language\phpmailer.lang-zh_cn.php   | PHP        |         20 |          7 |          3 |         30 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\src\Exception.php                   | PHP        |          9 |         28 |          4 |         41 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\src\OAuth.php                       | PHP        |         46 |         79 |         15 |        140 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\src\OAuthTokenProvider.php          | PHP        |          6 |         35 |          4 |         45 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\src\PHPMailer.php                   | PHP        |      2,839 |      1,870 |        380 |      5,089 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\src\POP3.php                        | PHP        |        178 |        233 |         52 |        463 |
+| c:\xampp\htdocs\B6Cinemas\phpmailer\phpmailer\src\SMTP.php                        | PHP        |        719 |        599 |        141 |      1,459 |
+| Total                                                                             |            |      9,942 |      3,677 |      1,609 |     15,228 |
++-----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

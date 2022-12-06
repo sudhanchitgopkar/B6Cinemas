@@ -43,7 +43,7 @@
 <div class="split left">
     <div class="nav-buttons">
         <button class="admin-button" onclick="location.href='manageAccounts.html'">Manage Accounts</a></button>
-        <button class="admin-button" onclick="location.href='manageMovies.html'">Manage Movies</button>
+        <button class="admin-button" onclick="location.href='manageMovies.php'">Manage Movies</button>
         <button class="admin-button" onclick="location.href='managePromotions.html'">Manage Promotions</button>
     </div>
 </div>
@@ -55,14 +55,14 @@
         <div class="text-forms">
             <form action="../../model/adminStuff/addPromo.php" method="post">
                 <label for="code">Promotion Code:</label>
-                <input type="text" name = "code" id="code"><br>
+                <input type="text" name = "code" id="code" required ><br>
                 <label for="code">Promotion Amount:</label>
-                <input type="text" name = "amount" id="amount"><br>
+                <input type="text" name = "amount" id="amount" required ><br>
                 <label for="start">Start Date:</label>
-                <input type="text" name = "start" id="start"><br>
+                <input type="text" name = "start" id="start" required ><br>
                 <label for="end">End Date:</label>
-                <input type="text" name = "end" id="end">
-                <button class="add-button" onclick="location.href='managepromotions.php'">Create</button>
+                <input type="text" name = "end" id="end" required >
+                <button class="add-button" href='managepromotions.php'">Create</button>
             </form>
         </div>
         <br>
