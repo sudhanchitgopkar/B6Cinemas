@@ -42,8 +42,23 @@
     <div class = "confMsg">
         <h1> You're all set! </h1>
         <?php
-            $user = "Sudhan";
-            $confNum = 100;
+            $query = "SELECT * FROM user WHERE user_id=:_user_id";
+            $statement = $db->prepare($query);
+            $statement->bindValue(":_user_id", $_SESSION['userID']);
+            $statement->execute();
+            $info = $statement->fetch(PDO::FETCH_ASSOC);
+
+
+            $user = $info['first_name'];
+            $email =$info['email']; 
+
+            $query2 = "SELECT * FROM booking ORDER BY booking_id DESC";
+            $statement2 = $db->prepare($query2);
+            $statement2->execute();
+            $info2 = $statement2->fetchAll(PDO::FETCH_ASSOC);
+
+            $confNum = $info2[0]['booking_id'];
+           
             echo "<p> Thanks for your order, " . $user . ".</p>";
             echo "<p>Your confirmation number is " . $confNum . ", and we've sent you an email confirmation.</p>";
         ?>
